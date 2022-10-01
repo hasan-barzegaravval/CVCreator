@@ -22,6 +22,6 @@ I can realize how much you will suffer reading these codes as you may not find t
 <h3>The dependencies are as shown in the maven file</h3>
 <h3>If by any chance, you find this code useful, please review and adopt the database. The current structure is for single user.</h3>
 <h2>How to use the project:</h2>
-Simple: I recommend using an IDE and you need JAVA FXML with MAVEN to use this codes. In addition I used Scene Builder to do the main Tab design. You may find it useful.
-Exectable,Docker and standalone: This project does not contain any of those however you can build as you like.
+Simple: I recommend using an IDE and you need JAVA FXML with MAVEN to use this codes. In addition I used Scene Builder to do the main Tab design. You may find it useful.<br>
+<b>Executable,Docker and standalone:</b> This project does not contain any of those however you can build as you like.
 <h2>The goal of this project has never been creating a framework or an application, but to share a way of doing an easy task (CV making) in a harder but more fun way.</h2>
