@@ -28,4 +28,5 @@ Simple: I recommend using an IDE and you need JAVA FXML with MAVEN to use this c
 <li>There are some default HTML,CSS,JS files in resource folder that you can use. ALL the icons are taken from the Web archiv icon website that you may find the link in the program and resources folder</li>
 <li>Unit test classes are removed. You should develope your own unit test classes by your desired structure specially for database testing.</li>
 <b>Executable,Docker and standalone:</b> This project does not contain any of those however you can build as you like.
+<br><i><b>To get the pdf version of the CV, after you make the HTML version, print the page in browser, you will be able to save as pdf.</b></i>
 <h2>The goal of this project has never been creating a framework or an application, but to share a way of doing an easy task (CV making) in a harder but more fun way.</h2>
