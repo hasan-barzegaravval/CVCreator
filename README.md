@@ -23,5 +23,9 @@ I can realize how much you will suffer reading these codes as you may not find t
 <h3>If by any chance, you find this code useful, please review and adopt the database. The current structure is for single user.</h3>
 <h2>How to use the project:</h2>
 Simple: I recommend using an IDE and you need JAVA FXML with MAVEN to use this codes. In addition I used Scene Builder to do the main Tab design. You may find it useful.<br>
+<li>Open the project in an IDE. The file name App.java is the main class that you need to run.</li>
+<li>If you are planing  to use the database you need to install database.</li>
+<li>There are some default HTML,CSS,JS files in resource folder that you can use. ALL the icons are taken from the Web archiv icon website that you may find the link in the program and resources folder</li>
+<li>Unit test classes are removed. You should develope your own unit test classes by your desired structure specially for database testing.</li>
 <b>Executable,Docker and standalone:</b> This project does not contain any of those however you can build as you like.
 <h2>The goal of this project has never been creating a framework or an application, but to share a way of doing an easy task (CV making) in a harder but more fun way.</h2>
