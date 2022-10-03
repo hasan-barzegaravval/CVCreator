@@ -1,0 +1,427 @@
+        /* 
+        ######################
+            General
+        ######################
+        */
+        .main{
+            padding-left: 0cm;
+            padding-right:0cm;
+            justify-content:  center;
+        }
+        .plus{
+            display:inline;
+        }
+        .SectionHeader{
+            width: 100%;
+            text-align: center;    
+            padding-left: 5px;
+            display:inline;
+            font-size: large ;
+        }
+        .Title{
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        #toShow{
+            display:block;
+        }
+        #toHide{
+            display:none;
+        }
+        .main{
+            border-bottom:  black solid 1px;
+        }
+        .main>.SectionHeader{
+            font-size: 24px;
+        }
+        .more .SectionHeader{
+            font-size:smaller;
+        }
+        /* 
+        ######################
+            Header
+        ######################
+        */.Header{
+            text-align: center;
+
+        }
+        .Infos{
+            display: grid;
+            grid-template-columns:auto auto auto auto auto;
+            padding-left: 5%;
+            padding-right: 5%;
+            border-bottom: solid black thin;
+        }
+        .InfoContainer>*{
+            display: inline;
+        }
+        .InfoContainer>img{
+            width:20px;
+            height:20px;
+        }
+        .InfoContainer>a{
+            text-decoration:  none;
+            color:  black;
+        }
+        #Name{
+            text-transform: uppercase;
+        }
+        #Description{
+
+        }
+        #linkedin{
+
+        }
+        #Email{
+
+        }
+        #Phone{
+
+        }
+        #GoogleScholar{
+
+        }
+        /* 
+        ######################
+            Profile
+        ######################
+        */.ProfileContent#toShow{
+            display:grid;
+            grid-template-columns:25% 75%;
+        }
+        .ProfileContentNoImage#toShow{
+            display:block;
+        }
+        .ProfileData>p{
+            padding:5px;
+            margin:5px;
+        }
+        .Profile{
+            display:inline;
+        }
+        .OnlyProfile>.Title{
+            display:none;
+        }
+        .ProfileData.more{
+            display:inline;
+        }
+        p.Profile>span.Content{
+            text-align: justify; 
+            margin-left: 25px;
+            display:block;
+        }
+        /* 
+        ######################
+            Education
+        ######################
+        */.EducationContent{
+            margin:0px;
+            padding:0px;
+        }
+        .EdHeader{
+            padding-top:5px;
+            padding-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .EdLink{
+            text-decoration: none;
+            color:black;
+            text-align: justify;
+            font-size:medium;
+            padding:0px;
+            margin:0px;
+        }
+      
+        /* 
+        ######################
+            Work Experience
+        ######################
+        */.Position>h3{
+
+        }
+        .Company{
+            margin-left: 10px;
+        }
+        .Company>h3{
+
+        }
+        .WorkExperience{}
+        .Projects{}
+        .Project>.SectionHeader{
+            text-align:justify;
+            font-size:medium;
+        }
+        
+        .Responsibilities{}
+        .Achievements{}
+        ol{
+            margin: 0px;
+            padding:0px;
+            padding-left: 20px;
+            list-style-type:none;            
+        }
+        .CourseHead{
+            display:none;
+        } 
+        .Reviewer>p{
+            display:none;
+        }
+        /* 
+        ######################
+            Skills
+        ######################
+        */
+        /* 
+        ######################
+            Languages
+        ######################
+        */
+        /* 
+        ######################
+            Publications
+        ######################
+        */
+        div.Cite{
+            text-align: justify;
+            padding-left:10px;
+        }
+        span.Title1{
+
+        }
+        span.Authors{
+            font-style:  italic;
+        }
+        span.isme{
+            font-style: oblique;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        span.Year{
+
+        }
+        span.Journal{
+
+        }
+        /* 
+        ######################
+            References
+        ######################
+        */
+        #Header{
+            text-align: center;
+        }
+        #ContactInfo>*{
+            display: inline;
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding: 10px 0 0 10px;    
+        }
+        .normallink{
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding-left: 20px;
+        }
+        .normalheader{
+            display:block;
+            text-align:left;
+        }
+        .note{
+            font-size: 100%;
+            font-weight:normal;
+        }
+        .Element>div{
+            display:none;
+            padding-left: 20px;
+        }
+        .ContentHolder{
+            margin:0px;
+            display:none;
+        }
+        
+        div.more{
+            display:inline;
+            margin-left: 10px;
+        }
+        .Comment{
+            font-style: italic;
+            margin:0px;
+            font-size: smaller;
+            background-color: aliceblue;
+            padding:5px;
+        }
+        li.Cite{
+            list-style: decimal;
+            padding-top: 5px;
+            text-align:  justify;   
+
+        }
+        li::marker{
+            font-weight:bold;
+        }
+        .CGPA,.Thesis{
+            display:inline;
+            margin-right: 20px;
+            margin-top:10px;
+        }
+        #esp{
+            color: red;
+        }
+        .LanguageContent *{
+            display:inline;
+            padding: 5px;
+        }
+        .SkillContent *{
+            padding-right: 50px;
+        }
+        .ReferenceContent{
+            margin: 10px;
+        }
+        .ReferenceContent>P{
+            padding:0px;
+            margin:0px;
+        }
+        p:not(#Discription){   
+            text-align: justify;           
+        }
+        .LanguageContent>div>div>p.Comment,.ReferenceContent>div>div>p.Comment{
+            background: none;
+        }
+        .Position:not(p.Position):hover{
+            /*background-color:antiquewhite;
+            border:1px dashed black;*/
+            background-color:#f4f5f0;
+
+        }
+        .Position>.Company:hover{
+            background-color:beige;
+        }
+        .ReferenceContent:hover{
+            background-color:beige;
+        }
+
+
+        @media only screen and (max-width: 600px){
+            .Infos{
+            grid-template-columns:auto;
+            grid-template-rows:auto auto auto auto;
+            padding-left: 0%;
+            padding-right: 0%;
+            }
+            .ProfileContent{
+                display:none;    
+            }
+        }
+        div.Broken{
+            display:none;
+        }
+        .Broken{
+            display:none;
+        }
+        body{		
+            width:210mm;
+            height:297mm;
+		    margin:0 auto;            
+        }
+ 	    @media print{
+        h3{
+            margin: 0px;
+            padding:0px;
+            font-size: 14px;
+
+        }
+        .SectionHeader{
+            font-size: 14px;
+        }
+        .main>.SectionHeader{
+            font-size:16px;
+        }
+        p:not(#Discription){
+            margin: 0px;
+            padding:0px;
+            font-size: 12px;;
+            text-align: justify;
+            text-indent: 1cm;
+        }
+        .EdLink{
+            font-size: 12px;;
+            text-align: justify;
+        }
+            
+        ol{
+            margin: 0px;
+            padding:0px;
+            padding-left: 1cm;
+            list-style-type:none;            
+        } 
+        li{
+            font-size: 13px;
+        }
+        .ProfileContentNoImage>div>*{
+            padding:0px;
+            margin:0px;
+            
+            
+        }
+        .EducationContent>div>*{
+            margin:0px;
+            padding:0px;
+        }
+        .EdHeader{
+            margin-top:2mm;
+            padding:0px;
+        }
+          
+        .Element>*{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            margin-bottom: 0px;
+        }
+	    .Element>div{
+            display: block;
+            
+        }
+        .Element>#toHide{
+            display:block;
+        }
+        .plus{
+            display:none;
+        }   
+        .more>.SectionHeader{
+		    display:none;
+	    }
+	    .Comment{
+		    display:none;
+	    }
+        .Project>.SectionHeader{
+            font-size: 13px;
+            font-weight: normal;
+            margin-left: 1cm;
+        }
+        .LanguageContent>.more>div>.Comment{
+            display:inline;
+        }
+        .Skill{
+            font-size: 13px;
+            font-weight: normal;
+            padding:0px;
+            padding-right: 2cm;
+            margin:0px;
+        }
+        p.Thesis{
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        .LanguageContent{
+            font-size: 12px;
+        }
+        .ReferenceContent{
+            font-size:12px;
+            padding:0px;
+            margin: 0px;
+        }
+       
+        }    

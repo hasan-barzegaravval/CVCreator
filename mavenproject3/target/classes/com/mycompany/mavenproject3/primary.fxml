@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject3.MainController">
+   <children>
+      <TabPane fx:id="MainTabPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Settings">
+              <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                   <children>
+                      <Accordion layoutX="10.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity">
+                        <panes>
+                            <TitledPane fx:id="Createtpan" animated="false" minHeight="-Infinity" prefHeight="94.0" prefWidth="772.0" text="Create New CV">
+                              <content>
+                                <AnchorPane minWidth="-Infinity">
+                                     <children>
+                                        <Label layoutX="24.0" layoutY="25.0" text="Project (CV) name:" />
+                                        <TextField fx:id="ProjectNametxt" layoutX="132.0" layoutY="21.0" prefHeight="26.0" prefWidth="438.0" />
+                                        <Button fx:id="Createbtn" layoutX="592.0" layoutY="20.0" mnemonicParsing="false" onAction="#CreateNewProject" prefHeight="26.0" prefWidth="79.0" text="Create" />
+                                     </children>
+                                  </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane fx:id="MySqlDBCtpan" animated="false" text="Database Connection (MySQL) : Not Connected">
+                              <content>
+                                <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
+                                     <children>
+                                        <Label layoutX="47.0" layoutY="14.0" text="Host Name:" />
+                                        <Label layoutX="47.0" layoutY="63.0" text="User Name:" />
+                                        <Label layoutX="399.0" layoutY="62.0" text="Password:" />
+                                        <Label layoutX="567.0" layoutY="13.0" text="port:" />
+                                        <TextField fx:id="HostNametxt" layoutX="120.0" layoutY="9.0" prefHeight="30.0" prefWidth="440.0" text="localhost" />
+                                        <TextField fx:id="PortNtxt" layoutX="610.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="3306" />
+                                        <TextField fx:id="UserNametxt" layoutX="120.0" layoutY="58.0" prefHeight="30.0" prefWidth="265.0" text="root" />
+                                        <Button fx:id="ConnectDBbtn" layoutX="47.0" layoutY="131.0" mnemonicParsing="false" onAction="#DatabaseConnector" prefHeight="30.0" prefWidth="90.0" text="Connect" />
+                                        <Label layoutX="47.0" layoutY="106.0" text="Conenction Status:" />
+                                        <TextArea fx:id="ConnectStatustxtA" editable="false" layoutX="155.0" layoutY="97.0" prefHeight="70.0" prefWidth="550.0" promptText="Not Connected" />
+                                          <PasswordField fx:id="Passpwf" layoutX="469.0" layoutY="58.0" prefHeight="30.0" prefWidth="240.0" text="123456789" />
+                                     </children>
+                                  </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          <TitledPane fx:id="LoadfromDBMySqltpan" animated="false" text="Load From Database (MySQL)">
+                            <content>
+                              <AnchorPane minWidth="-Infinity">
+                                     <children>
+                                        <Label layoutX="55.0" layoutY="20.0" prefHeight="25.0" text="Select Database:" />
+                                        <ComboBox fx:id="LoadDBscmb" layoutX="202.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#LoadProjectNames" prefHeight="30.0" prefWidth="250.0" />
+                                        <Label layoutX="55.0" layoutY="70.0" prefHeight="25.0" text="Select Project (CV)" />
+                                        <ComboBox fx:id="LoadProjectscmb" layoutX="202.0" layoutY="65.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" />
+                                        <Button fx:id="LoadDBbtn" layoutX="564.0" layoutY="17.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LoadDataBaseOnly" prefHeight="30.0" prefWidth="120.0" text="Load Database Only" />
+                                          <Button fx:id="LoadDBCVbtn" layoutX="564.0" layoutY="65.0" mnemonicParsing="false" onAction="#LoadProjectfromDB" prefHeight="28.0" prefWidth="122.0" text="Load Project (CV)" />
+                                     </children>
+                                  </AnchorPane>
+                            </content>
+                          </TitledPane>
+                          <TitledPane fx:id="LoadfromFiletpan" animated="false" minHeight="-Infinity" text="Load From File (JSON)">
+                            <content>
+                              <AnchorPane>
+                                     <children>
+                                        <Button fx:id="LoadFilebtn" layoutX="581.0" layoutY="27.0" mnemonicParsing="false" onAction="#JsonReader" prefHeight="26.0" prefWidth="83.0" text="Load Project" />
+                                        <TextField fx:id="LoadedFilePathtxt" layoutX="74.0" layoutY="27.0" prefHeight="26.0" prefWidth="487.0" />
+                                        <Label layoutX="11.0" layoutY="32.0" text="File:" />
+                                     </children>
+                                  </AnchorPane>
+                            </content>
+                          </TitledPane>
+                          <TitledPane fx:id="SavetoDBMySqltpan" animated="false" text=" Or Expand to Save as  new  Database (MySQL)">
+                            <content>
+                              <AnchorPane>
+                                     <children>
+                                        <CheckBox fx:id="CreateNewDBch" layoutX="45.0" layoutY="59.0" mnemonicParsing="false" onAction="#NewDBcheck" text="Create a new Databse" />
+                                        <Label layoutX="45.0" layoutY="105.0" text="CV name:" />
+                                        <TextField fx:id="NewCVNametxt" layoutX="389.0" layoutY="104.0" prefHeight="26.0" prefWidth="307.0" />
+                                        <TextField fx:id="CreateNewDBtxt" disable="true" layoutX="389.0" layoutY="59.0" prefHeight="26.0" prefWidth="306.0" />
+                                        <Label layoutX="45.0" layoutY="18.0" prefHeight="18.0" prefWidth="172.0" text="Select Database:" />
+                                        <ComboBox fx:id="SaveDBcmb" layoutX="389.0" layoutY="14.0" prefHeight="26.0" prefWidth="307.0" />
+                                        <Button fx:id="SaveAsDBbtn" layoutX="161.0" layoutY="138.0" mnemonicParsing="false" onAction="#SaveastoDB" prefHeight="26.0" prefWidth="398.0" text="Save as " />
+                                     </children>
+                                  </AnchorPane>
+                            </content>
+                               <graphic>
+                                  <Button fx:id="SaveDBbtn" mnemonicParsing="false" onAction="#SavetoDB" prefHeight="26.0" prefWidth="103.0" text="Click to Save" />
+                               </graphic>
+                          </TitledPane>
+                            <TitledPane fx:id="SavetoFiletpan" animated="false" text="Or Expand to Save as a new File (JSON)">
+                              <content>
+                                <AnchorPane>
+                                     <children>
+                                        <Label layoutX="51.0" layoutY="27.0" text="File: " />
+                                        <TextField fx:id="SaveAsFilePathtxt" layoutX="99.0" layoutY="23.0" prefHeight="30.0" prefWidth="480.0" />
+                                        <Button fx:id="SaveAsFilebtn" layoutX="606.0" layoutY="23.0" mnemonicParsing="false" onAction="#JsonWriterSaveas" prefHeight="26.0" prefWidth="101.0" text="Save As" />
+                                     </children></AnchorPane>
+                              </content>
+                               <graphic>
+                                  <Button fx:id="SaveFilebtn" mnemonicParsing="false" onAction="#JsonWriterSave" prefHeight="25.0" prefWidth="103.0" text="Click to Save" />
+                               </graphic>
+                            </TitledPane>
+                            <TitledPane fx:id="CreateHtmltpan" animated="false" text="Or Expand to set Customize HTML Creator">
+                              <content>
+                                <AnchorPane minWidth="-Infinity">
+                                     <children>
+                                        <Button fx:id="LoadMainJSbtn" layoutX="575.0" layoutY="16.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LoadJSMainbtn" prefHeight="30.0" prefWidth="135.0" text="Load MAIN JS Class" />
+                                        <Button fx:id="LoadHTMLbtn" layoutX="575.0" layoutY="95.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LoadHTMLbtn" prefHeight="30.0" prefWidth="135.0" text="Load Html Template" />
+                                        <Button fx:id="LoadCSSbtn" layoutX="574.0" layoutY="137.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LoadCSSbtn" prefHeight="30.0" prefWidth="135.0" text="Load CSS File" />
+                                        <TextField fx:id="LoadMainJStxt" layoutX="41.0" layoutY="18.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="525.0" />
+                                        <TextField fx:id="LoadHTMLtxt" layoutX="42.0" layoutY="96.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="525.0" />
+                                        <TextField fx:id="LoadCSStxt" layoutX="42.0" layoutY="139.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="525.0" />
+                                          <Button fx:id="CreatHtmlbtn" layoutX="575.0" layoutY="179.0" mnemonicParsing="false" onAction="#CreateHTMLbtn" prefHeight="30.0" prefWidth="135.0" text="CreatHtml" />
+                                          <TextField fx:id="CreateHtmltxt" layoutX="42.0" layoutY="178.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="525.0" />
+                                          <TextField fx:id="LoadLibJStxt" layoutX="41.0" layoutY="56.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="525.0" />
+                                          <Button fx:id="LoadLibJSbtn1" layoutX="574.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LoadJSLibbtn" prefHeight="30.0" prefWidth="135.0" text="Load LIB JS Class" />
+                                     </children></AnchorPane>
+                              </content>
+                               <graphic>
+                                  <Button fx:id="CreateDeafultHtmlbtn" mnemonicParsing="false" onAction="#CreateHTMLbyDefaults" prefHeight="25.0" prefWidth="104.0" text="Create HTML" />
+                               </graphic>
+                            </TitledPane>
+                        </panes>
+                      </Accordion>
+                   </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+         </tabs></TabPane>
+   </children>
+</Pane>

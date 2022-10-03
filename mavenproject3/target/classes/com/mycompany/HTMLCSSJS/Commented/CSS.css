@@ -1,0 +1,287 @@
+         /*
+         * Copyright (C) 2022 Hasan Barzegaravval
+         *
+         * This program is free software: you can redistribute it and/or modify
+         * it under the terms of the GNU General Public License as published by
+         * the Free Software Foundation, either version 3 of the License, or
+         * (at your option) any later version.
+         *
+         * This program is distributed in the hope that it will be useful,
+         * but WITHOUT ANY WARRANTY; without even the implied warranty of
+         * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+         * GNU General Public License for more details.
+         *
+         * You should have received a copy of the GNU General Public License
+         * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+         */
+         /*
+         * @author  Hasan Barzegaravval
+         * @see     Lib.js,Main.js,CSS.css
+         * @version 1.0
+         * @since   1.0
+         */
+        /* 
+        ######################
+            General
+        ######################
+        */
+        .main{
+            padding-left: 20px;
+            padding-right:20px;
+            justify-content:  center;
+        }
+        .plus{
+            display:inline;
+        }
+        .SectionHeader{
+            width: 100%;
+            text-align: center;    
+            padding-left: 5px;
+            display:inline;
+            font-size: large ;
+        }
+        .Title{
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        #toShow{
+            display:block;
+        }
+        #toHide{
+            display:none;
+        }
+        .main{
+            border-bottom:  black solid 1px;
+        }
+        .more .SectionHeader{
+            font-size:smaller;
+        }
+        /* 
+        ######################
+            Header
+        ######################
+        */.Header{
+            text-align: center;
+
+        }
+        .Infos{
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            border-bottom: solid black thin;
+        }
+        .InfoContainer>*{
+            display: inline;
+        }
+        .InfoContainer>img{
+            width:20px;
+            height:20px;
+        }
+        .InfoContainer>a{
+            text-decoration:  none;
+            color:  black;
+        }
+        #Name{
+            text-transform: uppercase;
+
+        }
+        #Description{
+
+        }
+        #linkedin{
+
+        }
+        #Email{
+
+        }
+        #Phone{
+
+        }
+        #GoogleScholar{
+
+        }
+        /* 
+        ######################
+            Profile
+        ######################
+        */.ProfileContent#toShow{
+            display:grid;
+            grid-template-columns:25% 75%;
+        }
+        .ProfileData>p{
+            padding:5px;
+            margin:5px;
+
+        }
+        .Profile{
+            display:inline;
+
+        }
+        .ProfileData.more{
+            display:inline;
+        }
+        p.Profile>span.Content{
+            text-align: justify; 
+            margin-left: 25px;
+            display:block;
+
+        }
+        /* 
+        ######################
+            Education
+        ######################
+        */.EducationContent{
+            margin:0px;
+            padding:0px;
+        }
+        /* 
+        ######################
+            Work Experience
+        ######################
+        */.Position>h3{
+
+        }
+        .Company{
+            margin-left: 10px;
+        }
+        .Company>h3{
+
+        }
+        .WorkExperience{}
+        .Projects{}
+        .Responsibilities{}
+        .Achievements{}
+        /* 
+        ######################
+            Skills
+        ######################
+        */
+        /* 
+        ######################
+            Languages
+        ######################
+        */
+        /* 
+        ######################
+            Publications
+        ######################
+        */
+        div.Cite{
+            text-align: justify;
+            padding-left:10px;
+        }
+        span.Title1{
+
+        }
+        span.Authors{
+            font-style:  italic;
+        }
+        span.isme{
+            font-style: oblique;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        span.Year{
+
+        }
+        span.Journal{
+
+        }
+        /* 
+        ######################
+            References
+        ######################
+        */
+        #Header{
+            text-align: center;
+        }
+        #ContactInfo>*{
+            display: inline;
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding: 10px 0 0 10px;    
+        }
+        .normallink{
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding-left: 20px;
+        }
+        .normalheader{
+            display:block;
+            text-align:left;
+        }
+        .note{
+            font-size: 100%;
+            font-weight:normal;
+        }
+        .Element>div{
+            display:none;
+            padding-left: 20px;
+        }
+        .ContentHolder{
+            margin:0px;
+            display:none;
+        }
+        .EdLink{
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding-left: 20px;
+        }
+        div.more{
+            display:inline;
+            margin-left: 10px;
+        }
+        .Comment{
+            font-style: italic;
+            margin:0px;
+            font-size: smaller;
+        }
+        li.Cite{
+            list-style: decimal;
+            padding-top: 5px;
+            text-align:  justify;   
+
+        }
+        li::marker{
+            font-weight:bold;
+        }
+        .CGPA,.Thesis{
+            display:inline;
+            margin-right: 20px;
+            margin-top:10px;
+        }
+        #esp{
+            color: red;
+        }
+        .LanguageContent *{
+            display:inline;
+            padding: 5px;
+        }
+        .SkillContent *{
+            padding-right: 50px;
+        }
+        .ReferenceContent{
+            margin: 10px;
+        }
+        .ReferenceContent>P{
+            padding:0px;
+            margin:0px;
+        }
+        @media only screen and (max-width: 600px){
+            .Infos{
+            grid-template-columns:auto;
+            grid-template-rows:auto auto auto auto;
+            padding-left: 0%;
+            padding-right: 0%;
+            }
+            .ProfileContent{
+                display:none;    
+            }
+        }
+        div.Broken{
+            display:none;
+        }

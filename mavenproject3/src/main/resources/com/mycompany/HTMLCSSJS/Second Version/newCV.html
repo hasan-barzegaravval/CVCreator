@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Style Sheet-->
+<style>
+        /* 
+        ######################
+            General
+        ######################
+        */
+        .main{
+            padding-left: 0cm;
+            padding-right:0cm;
+            justify-content:  center;
+        }
+        .plus{
+            display:inline;
+        }
+        .SectionHeader{
+            width: 100%;
+            text-align: center;    
+            padding-left: 5px;
+            display:inline;
+            font-size: large ;
+        }
+        .Title{
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        #toShow{
+            display:block;
+        }
+        #toHide{
+            display:none;
+        }
+        .main{
+            border-bottom:  black solid 1px;
+        }
+        .main>.SectionHeader{
+            font-size: 24px;
+        }
+        .more .SectionHeader{
+            font-size:smaller;
+        }
+        /* 
+        ######################
+            Header
+        ######################
+        */.Header{
+            text-align: center;
+
+        }
+        .Infos{
+            display: grid;
+            grid-template-columns:auto auto auto auto auto;
+            padding-left: 5%;
+            padding-right: 5%;
+            border-bottom: solid black thin;
+        }
+        .InfoContainer>*{
+            display: inline;
+        }
+        .InfoContainer>img{
+            width:20px;
+            height:20px;
+        }
+        .InfoContainer>a{
+            text-decoration:  none;
+            color:  black;
+        }
+        #Name{
+            text-transform: uppercase;
+        }
+        #Description{
+
+        }
+        #linkedin{
+
+        }
+        #Email{
+
+        }
+        #Phone{
+
+        }
+        #GoogleScholar{
+
+        }
+        /* 
+        ######################
+            Profile
+        ######################
+        */.ProfileContent#toShow{
+            display:grid;
+            grid-template-columns:25% 75%;
+        }
+        .ProfileContentNoImage#toShow{
+            display:block;
+        }
+        .ProfileData>p{
+            padding:5px;
+            margin:5px;
+        }
+        .Profile{
+            display:inline;
+        }
+        .OnlyProfile>.Title{
+            display:none;
+        }
+        .ProfileData.more{
+            display:inline;
+        }
+        p.Profile>span.Content{
+            text-align: justify; 
+            margin-left: 25px;
+            display:block;
+        }
+        /* 
+        ######################
+            Education
+        ######################
+        */.EducationContent{
+            margin:0px;
+            padding:0px;
+        }
+        .EdHeader{
+            padding-top:5px;
+            padding-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .EdLink{
+            text-decoration: none;
+            color:black;
+            text-align: justify;
+            font-size:medium;
+            padding:0px;
+            margin:0px;
+        }
+      
+        /* 
+        ######################
+            Work Experience
+        ######################
+        */.Position>h3{
+
+        }
+        .Company{
+            margin-left: 10px;
+        }
+        .Company>h3{
+
+        }
+        .WorkExperience{}
+        .Projects{}
+        .Project>.SectionHeader{
+            text-align:justify;
+            font-size:medium;
+        }
+        
+        .Responsibilities{}
+        .Achievements{}
+        ol{
+            margin: 0px;
+            padding:0px;
+            padding-left: 20px;
+            list-style-type:none;            
+        }
+        .CourseHead{
+            display:none;
+        } 
+        .Reviewer>p{
+            display:none;
+        }
+        /* 
+        ######################
+            Skills
+        ######################
+        */
+        /* 
+        ######################
+            Languages
+        ######################
+        */
+        /* 
+        ######################
+            Publications
+        ######################
+        */
+        div.Cite{
+            text-align: justify;
+            padding-left:10px;
+        }
+        span.Title1{
+
+        }
+        span.Authors{
+            font-style:  italic;
+        }
+        span.isme{
+            font-style: oblique;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        span.Year{
+
+        }
+        span.Journal{
+
+        }
+        /* 
+        ######################
+            References
+        ######################
+        */
+        #Header{
+            text-align: center;
+        }
+        #ContactInfo>*{
+            display: inline;
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding: 10px 0 0 10px;    
+        }
+        .normallink{
+            text-decoration: none;
+            color:black;
+            font-style:normal;
+            padding-left: 20px;
+        }
+        .normalheader{
+            display:block;
+            text-align:left;
+        }
+        .note{
+            font-size: 100%;
+            font-weight:normal;
+        }
+        .Element>div{
+            display:none;
+            padding-left: 20px;
+        }
+        .ContentHolder{
+            margin:0px;
+            display:none;
+        }
+        
+        div.more{
+            display:inline;
+            margin-left: 10px;
+        }
+        .Comment{
+            font-style: italic;
+            margin:0px;
+            font-size: smaller;
+            background-color: aliceblue;
+            padding:5px;
+        }
+        li.Cite{
+            list-style: decimal;
+            padding-top: 5px;
+            text-align:  justify;   
+
+        }
+        li::marker{
+            font-weight:bold;
+        }
+        .CGPA,.Thesis{
+            display:inline;
+            margin-right: 20px;
+            margin-top:10px;
+        }
+        #esp{
+            color: red;
+        }
+        .LanguageContent *{
+            display:inline;
+            padding: 5px;
+        }
+        .SkillContent *{
+            padding-right: 50px;
+        }
+        .ReferenceContent{
+            margin: 10px;
+        }
+        .ReferenceContent>P{
+            padding:0px;
+            margin:0px;
+        }
+        p:not(#Discription){   
+            text-align: justify;           
+        }
+        .LanguageContent>div>div>p.Comment,.ReferenceContent>div>div>p.Comment{
+            background: none;
+        }
+        .Position:not(p.Position):hover{
+            /*background-color:antiquewhite;
+            border:1px dashed black;*/
+            background-color:#f4f5f0;
+
+        }
+        .Position>.Company:hover{
+            background-color:beige;
+        }
+        .ReferenceContent:hover{
+            background-color:beige;
+        }
+
+
+        @media only screen and (max-width: 600px){
+            .Infos{
+            grid-template-columns:auto;
+            grid-template-rows:auto auto auto auto;
+            padding-left: 0%;
+            padding-right: 0%;
+            }
+            .ProfileContent{
+                display:none;    
+            }
+        }
+        div.Broken{
+            display:none;
+        }
+        .Broken{
+            display:none;
+        }
+        body{		
+            width:210mm;
+            height:297mm;
+		    margin:0 auto;            
+        }
+ 	    @media print{
+        h3{
+            margin: 0px;
+            padding:0px;
+            font-size: 14px;
+
+        }
+        .SectionHeader{
+            font-size: 14px;
+        }
+        .main>.SectionHeader{
+            font-size:16px;
+        }
+        p:not(#Discription){
+            margin: 0px;
+            padding:0px;
+            font-size: 12px;;
+            text-align: justify;
+            text-indent: 1cm;
+        }
+        .EdLink{
+            font-size: 12px;;
+            text-align: justify;
+        }
+            
+        ol{
+            margin: 0px;
+            padding:0px;
+            padding-left: 1cm;
+            list-style-type:none;            
+        } 
+        li{
+            font-size: 13px;
+        }
+        .ProfileContentNoImage>div>*{
+            padding:0px;
+            margin:0px;
+            
+            
+        }
+        .EducationContent>div>*{
+            margin:0px;
+            padding:0px;
+        }
+        .EdHeader{
+            margin-top:2mm;
+            padding:0px;
+        }
+          
+        .Element>*{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            margin-bottom: 0px;
+        }
+	    .Element>div{
+            display: block;
+            
+        }
+        .Element>#toHide{
+            display:block;
+        }
+        .plus{
+            display:none;
+        }   
+        .more>.SectionHeader{
+		    display:none;
+	    }
+	    .Comment{
+		    display:none;
+	    }
+        .Project>.SectionHeader{
+            font-size: 13px;
+            font-weight: normal;
+            margin-left: 1cm;
+        }
+        .LanguageContent>.more>div>.Comment{
+            display:inline;
+        }
+        .Skill{
+            font-size: 13px;
+            font-weight: normal;
+            padding:0px;
+            padding-right: 2cm;
+            margin:0px;
+        }
+        p.Thesis{
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        .LanguageContent{
+            font-size: 12px;
+        }
+        .ReferenceContent{
+            font-size:12px;
+            padding:0px;
+            margin: 0px;
+        }
+       
+        }    
+</style>
+        
+        <!--Code Libraries-->
+<script>
+        class Element{    
+            constructor(HeaderContent,Content,classname){
+                this.HC=HeaderContent; 
+                this.C=Content;
+                this.DIV=document.createElement("div");                
+                classname.push("Element");
+                classname.forEach((item)=>this.DIV.classList.add(item));
+                this.Header=this.HeaderCreate(this.HC);
+                this.SignP=document.createElement("p");
+                this.SignP.classList.add("plus");
+                this.SignP.appendChild(document.createTextNode("+"));
+                this.DIV.appendChild(this.SignP);
+                this.DIV.appendChild(this.Header);        
+                this.ContentHolder=this.ContentCreate(Content);
+                try{
+                this.DIV.appendChild(this.ContentHolder); 
+                }catch(err){
+                    console.log(err.length);
+                }
+                this.Header.toHide=this.ContentHolder;
+                this.Header.toChange=this.SignP;
+                this.Header.addEventListener('click',function(){
+                    if (this.toHide.id=='toShow'){
+                        this.toHide.id='toHide';
+                        this.toChange.innerHTML="(+)";
+                    }else{
+                        this.toHide.id='toShow';
+                        this.toChange.innerHTML="(-)";
+                    }
+                });  
+            }
+            HeaderCreate(HeaderContent){
+                var H=document.createElement(HeaderContent.tag);
+                H.setAttribute("class",HeaderContent.Class);
+                H.appendChild(document.createTextNode(HeaderContent.Text)); 
+                return H;        
+            }
+            ContentCreate(CONTENT){
+                var CellArray=[];
+                function creator(Content){
+                    var Cel;
+                    if (typeof(Content)===typeof("String")){
+                        Cel=document.createElement("div");
+                        var pa=document.createElement("p");
+                        pa.appendChild(document.createTextNode(Content));
+                        Cel.appendChild(pa);
+                        Cel.style.display='none';
+                    }else if (Content instanceof Element){               
+                        Cel=Content.DIV;
+                    }else{
+                        Cel=Content.El;
+                    }
+                    CellArray.push(Cel);
+                }      
+                if ((Array.isArray(CONTENT))&&(typeof(CONTENT)!==typeof("String"))){
+                    CONTENT.forEach(creator);        
+                    var holder=document.createElement("div");
+                    CellArray.forEach((item)=>holder.appendChild(item));
+                    return holder;
+                }else{
+                    creator(CONTENT);
+                    return CellArray[0];
+                }
+            }   
+            ToSHow(){
+                document.body.appendChild(this.DIV);
+                this.DIV.style.display='block';
+            }    
+        }
+        class CustomElement{
+            constructor(tag,text,attribs){
+                if (tag!==""){
+                    this.El=document.createElement(tag);
+                    this.El.innerHTML=text;
+                    for (var x in attribs){
+                        if (x==="class"){
+                            try{
+                                attribs[x].forEach((item)=>this.El.classList.add(item));
+                            }catch(error){
+                                this.El.setAttribute(x,attribs[x]);
+                            }
+                        }else{
+                            this.El.setAttribute(x,attribs[x]);
+                        }                    
+                    }
+                }else{
+                    this.El=null;
+                } 
+            }
+            appendAll(ELs){
+                ELs.forEach((item)=>this.appender(item));        
+            }
+            appender(item){
+                try{
+                if (item instanceof CustomElement){
+                    this.El.appendChild(item.El);
+                }else{
+                    this.El.appendChild(item.DIV);            
+                }
+                }catch(err){
+                    console.log(err);
+                }
+            }
+
+            ToShow(){
+                document.body.appendChild(this.El);
+            }
+            Clone(){
+                var ClonCustom=new CustomElement("","","");        
+                ClonCustom.El=this.El.cloneNode(true);
+                return ClonCustom;
+            }
+        }
+        class Header{
+            constructor(DATA){
+                this.Name=DATA.Name;
+                this.Discription=DATA.Discription;
+                this.Info=DATA.Info;        
+                let Name=new CustomElement("h1",this.Name,{"id":"Name"});
+                let Dis=new CustomElement("p",this.Discription,{"id":"Discription"});
+                let Infos=this.Info.map(function(e){return (new IconData(e)).Create();});
+                let infoDiv=new CustomElement("div","",{"class":"Infos"});
+                infoDiv.appendAll(Infos);
+                this.Div=new CustomElement("div","",{"class":"Header"});
+                this.Div.appendAll([Name,Dis,infoDiv]);
+                }
+                Create(){
+                    return this.Div.El;
+                }
+                ToSHow(){
+                document.body.appendChild(this.Div.El);
+                }    
+        }
+        class Profile{
+            constructor(DATA){
+                this.Photo=DATA.Photo;
+                this.Age=DATA.Age;
+                this.MaterialStatus=DATA.MaterialStatus;
+                this.Profile=DATA.Profile;
+                this.Comment=DATA.Comment;
+                let classname=["ProfileImage","ProfileContent","Profile"];                
+                if (!this.photo){            
+                    classname=["Broken","ProfileContentNoImage","Profile"];                    
+                }
+                if (!(this.Age||this.MaterialStatus)){
+                    classname[2]=["OnlyProfile"];
+                }
+                let Photo=new CustomElement("img","",{"class":"Photo","src":this.Photo});
+                let Age=new TitleContent("Age:",this.Age,"Age").Create();
+                let MaterialStatus=new TitleContent("MaterialStatus:",this.MaterialStatus,"MaterialStatus").Create();
+                let Profile=new TitleContent("Profile:",this.Profile,classname[2]).Create();        
+                let Comment=new CustomElement("p",this.Comment,{"class":"Comment"});
+                let Edmore=new Element({tag:"h3",Text:"more",Class:"SectionHeader"},[Comment],["Element",Comment?"more":"Broken"]);                
+                let DivImage=new CustomElement("div","",{"class":classname[0]}); 
+                DivImage.appender(Photo);
+                let DivData=new CustomElement("div","",{"class":"ProfileData"});
+                DivData.appendAll([Age,MaterialStatus,Profile,Edmore]);
+                this.Div=new CustomElement("div","",{"class":classname[1]});
+                this.Div.appendAll([DivImage,DivData]);       
+            }
+
+            Create(){
+            return this.Div;
+            }
+        }
+        class WorkExp{
+            constructor(EData,Pos){
+                this.Company=EData.Company;        
+                this.Position=Pos;
+                this.Projects=EData.Projects;
+                this.StartDate=EData.StartDate;
+                this.EndDate=EData.EndDate;
+                this.Responsibilities=EData.Responsibilities;
+                this.Achievements=EData.Achievements;
+                
+                if (this.Projects !=null){
+                    if (this.Position.includes("Tutor")){
+                        this.constructorTutor(EData);
+                    }else if(this.Position.includes("Review")){
+                        this.constructorReviewer(EData);
+                    }else{
+                        this.constructorGeneral(EData);
+                    }
+                }
+            }
+            constructorGeneral(EDATA){      
+                let Projectlist=[];
+                let ResList=[];
+                let AchiList=[];
+                let Content=new CustomElement("div","",{"class":"WorkExperience"});          
+                try{
+                    this.Projects.forEach((item)=>Projectlist.push(this.CreateProject(item)));
+                }catch(err){
+                    Projectlist.push(CreateProject(this.Projects));
+                }
+                let CP=new CustomElement("div","",{"class":"Projects"});
+                CP.appender(new CustomElement("h3","Projects:",{}));
+                CP.appendAll(Projectlist);
+                Content.appender(CP);                
+                if (this.Responsibilities !=null){
+                    let RL=this.CreateList(this.Responsibilities);
+                    let RLHead= new CustomElement("h3","Responsibilities:",{});
+                    let RLdiv=new CustomElement("div","",{"class":"Responsibilities"});
+                    RLdiv.appendAll([RLHead,RL]);
+                    Content.appender(RLdiv);
+                }
+                if (this.Achievements !=null){
+                    let AV=this.CreateList(this.Achievements);
+                    let AVHead=new CustomElement("h3","Achievements:",{});        
+                    let AVdiv=new CustomElement("div","",{"class":"Achievements"});
+                    AVdiv.appendAll([AVHead,AV]);
+                    Content.appender(AVdiv);
+                }
+                this.WORKEXP=new Element({tag:"h3",Text:this.Company+Dates(this),Class:"SectionHeader"},Content,["Company"]);
+
+            }
+            constructorTutor(EDATA){  
+                let Content=new CustomElement("div","",{"class":"WorkExperience"});              
+                let CoursesList=this.CreateList(this.Projects.map(function(e){return e.Title}));
+                let CoursesHead=new CustomElement("h3","Courses:",{"class":"CourseHead"});
+                let CoursesDiv=new CustomElement("div","",{"class":"Courses"});
+                CoursesDiv.appendAll([CoursesHead,CoursesList]);
+                Content.appender(CoursesDiv);
+                this.WORKEXP=new Element({tag:"h3",Text:this.Company+Dates(this),Class:"SectionHeader"},Content,["Company","Tutor"]);
+            }
+            constructorReviewer(EDATA){
+                let Content=new CustomElement("div","",{"class":"WorkExperience"});              
+                let JournalList=this.CreateList(this.Projects.map(function(e){return e.Title}));
+                Content.appender(JournalList);
+                this.WORKEXP=new Element({tag:"h3",Text:this.Company,Class:"SectionHeader"},Content,["Company","Reviewer"]);
+            }
+            CreateProject(Proj){
+                var linkclass;
+                ((Proj.Link == null)|(Proj.Link=="")) ? linkclass=["ProjectsLink","Broken"]:linkclass="ProjectsLink";
+                let Plink=new CustomElement("a","Visit the link to find out more",{"href":Proj.Link,"class":linkclass});
+                let PComment=new CustomElement("p",Proj.Comment,{"id":"comment","class":"Comment"});
+                return new Element({tag:"h3",Text:Proj.Title,Class:"SectionHeader"},[PComment,Plink],["Element","Project"]);        
+            }            
+            CreateList(Data){
+                let RL=new CustomElement("ol","",{});
+                try{
+                    Data.forEach((item)=>RL.appender(new CustomElement("li",item,{})));
+                }catch(err){
+                    RL.appender(new CustomElement("li",Data,{}));
+                }
+                return RL;
+            }
+            Create(){
+                return this.WORKEXP;
+            }    
+        }
+      
+        class Education{
+            constructor(EData){
+                this.Institue=EData.Institue;
+                this.Degree=EData.Degree;
+                this.InstitueLink=EData.Link;
+                this.StartDate=EData.StartDate;
+                this.EndDate=EData.EndDate;
+                this.Thesis=EData.Thesis;
+                this.CGPA=EData.CGPA;
+                this.Comment=EData.Comment;
+                this.EdHeader=new CustomElement("h3",this.Degree+Dates(this),{"class":"EdHeader"});
+                this.EdInstitue=new CustomElement("a",this.Institue,{"href":this.InstitueLink,"class":"EdLink"});
+                this.pCGPA=new CustomElement("p","<b>CGPA<b>:"+this.CGPA,{"class":["more",this.CGPA?"CGPA":"Broken"]});
+                //this.pThesis=new CustomElement("p","<b>Thesis<b>:"+this.Thesis,{"class":["more",this.Thesis?"Thesis":"Broken"]});
+                this.pThesis = new TitleContent("Thesis:", this.Thesis, this.Thesis ? "Thesis" : "Broken").Create();
+                this.pComment = new CustomElement("p", this.Comment, { "id": "comment", "class": ["more", "Comment"] });
+                this.Edmore=new Element({tag:"h3",Text:"more",Class:"SectionHeader"},[this.pCGPA,this.pThesis,this.pComment],["Element","more"]);        
+            }
+            Create(){
+                var div=new CustomElement("div","",{"class":"EducationContent"});
+                div.appendAll([this.EdHeader,this.EdInstitue,this.Edmore]);
+                return div;
+            }    
+        }
+        class Skill{
+            constructor(EData){
+                let Rows=EData.map(this.tablerow);
+                this.table=new CustomElement("table","",{"class":"SkillTable"});
+                this.table.appendAll(Rows);
+            }
+            tablerow(EData){        
+                let Star="";
+                for(let i=0;i<10;i++){ 
+                    (i<EData.Rate)?Star+="&#9733":Star+="&#9734";};
+                let dSkill=new CustomElement("td",EData.Skill,{"class":"Skill"});
+                let dStar=new CustomElement("td",Star,{"class":"Stars"});
+                let drow=new CustomElement("tr","",{});
+                drow.appendAll([dSkill,dStar]);
+                return drow;
+            }
+            Create(){   
+                var div=new CustomElement("div","",{"class":"SkillContent"});
+                div.appender(this.table);
+                return div;
+            }
+        }
+        class Language{
+            constructor(EData){
+            this.Language=EData.Language;
+            this.Fluency=EData.Fluency;
+            this.Test=EData.Test;
+            this.Score=EData.Score;
+            this.Comment=EData.Comment;
+            let cComment=["more","Comment"];
+            let cScore=["Score","more"];
+            let cmore=["more"];
+            let cTest=["more","Test"];
+            if ((this.Comment=="")||(this.Comment==null)) {cComment.push("Broken");};
+            if ((this.Score=="")||(this.Score==null)) {cScore.push("Broken");};
+            if ((cScore.length==3)&&(cComment.length==3)) {cmore.push("Broken");}; 
+            cTest.push(cScore[cScore.length-1]);
+            //this.pLanguage=new CustomElement("p",this.Language+":",{"class":"Language"});
+            //this.pFluency=new CustomElement("p",this.Fluency,{"class":"Fluency"});
+            //this.pTest=new CustomElement("p",this.Test,{"class":cScore});
+                //this.pScore=new CustomElement("p"," Score:"+this.Score,{"class":cTest});
+                this.pLanguage = new TitleContent(this.Language + ":", this.Fluency, "Language").Create();
+                this.pTest = new TitleContent(this.Test + ":", this.Score, cScore).Create();
+                this.pComment=new CustomElement("p",this.Comment,{"class":cComment});
+                this.Lanmore = new Element({ tag: "h3", Text: "more", Class: ["SectionHeader"] }, [this.pTest, this.pComment], cmore);
+                //this.Lanmore = new Element({ tag: "h3", Text: "more", Class: ["SectionHeader"] }, [this.pTest, this.pScore, this.pComment], cmore);
+
+            }
+            Create(){   
+                var div=new CustomElement("div","",{"class":"LanguageContent"});
+                //div.appendAll([this.pLanguage, this.pFluency, this.Lanmore]);
+                div.appendAll([this.pLanguage, this.Lanmore]);
+                return div; 
+            }
+        }
+        class Certificate{
+            constructor(){
+
+            }
+        }
+        class Awards{
+            constructor(){
+
+            }
+        }
+        class Reference{
+            constructor(DATA){
+                this.Name=DATA.Name;
+                this.Position=DATA.Position;
+                this.Company=DATA.Company;
+                this.Phone=DATA.Phone;
+                this.Email=DATA.Email;
+                this.Comment=DATA.Comment;
+                let Name=new CustomElement("p",this.Name,{"class":"Name"});
+                let Position=new CustomElement("p",this.Position,{"class":"Position"});
+                let Company=new CustomElement("p",this.Company,{"class":"Company"});
+                let Phone=new CustomElement("p",this.Phone,{"class":"Phone"});
+                let Email=new CustomElement("p",this.Email,{"class":"Email"});
+                let Comment=new CustomElement("p",this.Comment,{"class":"Comment"});        
+                let Edmore=new Element({tag:"h3",Text:"more",Class:(DATA==null?"Broken":"SectionHeader")},[Comment],["Element","more"]);
+                this.Div=new CustomElement("div","",{"class":(DATA==null?"Broken":"ReferenceContent")});
+                this.Div.appendAll([Name,Position,Company,Phone,Email,Edmore]);
+            }
+            Create(){
+                return this.Div;
+            }
+        }
+        class Publications{
+            constructor(Data,cp){
+                this.els=new Set();
+                this.CP=cp;
+                Data.forEach((item)=>this.CiteCreate(item));
+                let Texts={"JOUR":"Journals","BOOK":"Books","CHAP":"Book Chapters","CONF":"Conference"};
+                let ElementArray=[];
+
+                this.els.forEach(function(e){ElementArray.push( new Element({tag:"h3",Class:"SectionHeader",Text:Texts[e]},this[e],["Element",e]));}.bind(this));
+
+                try{
+                this.El=new Element({tag:"h2",Class:"SectionHeader",Text:"Publications"},ElementArray,["Element",ElementArray.length?"main":"Broken"]);
+            }catch(err){
+                console.log(err);
+            }
+            } 
+            CiteCreate(DATA){
+                let Div=new CustomElement("li","",{"class":["Cite",DATA["Type"]]});
+                let checker=this.CP["isme"];
+                let dim=Array.from(this.CP[DATA["Type"]]).pop();
+                this.CP[DATA["Type"]].forEach(function(d){
+
+                    if(d!="Authors"){
+                        if (d==dim){
+                            if (DATA[d]===undefined){ 
+                                Div.appendAll([new CustomElement("span","",{"class":[d]}),new CustomElement("span",'.&nbsp',{"class":["sep"]})]);
+                            }else{
+                                Div.appendAll([new CustomElement("span",DATA[d],{"class":[d]}),new CustomElement("span",'.&nbsp',{"class":["sep"]})]);
+                            }
+                        }else{
+                            if (DATA[d]!==undefined) Div.appendAll([new CustomElement("span",DATA[d],{"class":[d]}),new CustomElement("span",',&nbsp',{"class":["sep"]})]);
+
+
+
+                        }
+                    }else{    
+                        try{
+                        DATA[d].forEach(function(Au){Div.appendAll([new CustomElement("span",Au.replace(',',''),{"class":[d,checker(Au)]}),new CustomElement("span",',&nbsp',{"class":["sep"]})]);});
+                    }catch(err){
+                        console.log(err);
+                    }
+                    }
+                });
+                try{
+                (this[DATA["Type"]])?this[DATA["Type"]].push(Div):this[DATA["Type"]]=[Div];
+                this.els.add(DATA["Type"]);
+            }catch(err){
+                console.log(err);
+            }
+            }
+        }
+        class TitleContent{
+            constructor(Title,Content,Class){
+                this.P=new CustomElement('p',"",{"class":Content?Class:"Broken"});
+                this.P.appendAll([new CustomElement('span',Title,{"class":"Title"}),new CustomElement('span',Content,{"class":"Content"})]);
+            }
+            Create(){
+                return this.P;
+            }
+        }
+        class IconData{
+            constructor(DATA){
+            this.div=new CustomElement("div","",{"class":"InfoContainer"});
+            let icon=new CustomElement("img","",{"src":DATA.icon});
+            let content=null;
+            if (DATA['Link']){
+                content=new CustomElement("a",DATA.Value,{"id":DATA.Name,"href":DATA.Link,"target":"_blank"}); 
+            }else{
+                content=new CustomElement("p",DATA.Value,{"id":DATA.Name}); 
+            }
+                this.div.appendAll([icon,content]);
+            }
+            Create(){
+                return this.div;
+            }
+        }
+        function Dates(DATA){
+            return " ("+DATA.StartDate+"-"+DATA.EndDate+")";
+        }
+        function Work(DATA){
+        let WExps=new CustomElement("div","",{"class":"Position"});
+        console.log(DATA.Position);
+        WExps.appender(new CustomElement("h3",DATA.Position));
+        DATA.Companies.forEach((item)=>WExps.appender((new WorkExp(item,DATA.Position)).Create()));
+        return WExps;   
+        }
+
+</script>
+        
+        <!--JSON Data-->
+<script>
+Data={
+  "objectlist" : [ "newCV", 1, "[1, 2, 3, 4, 5]", 1, "[1, 2]", "1#1-[1, 2, 3]-[1, 2, 3, 4, 5, 6, 7, 8, 9]-[1, 2, 3, 4, 5, 6]#/2#2-[4, 5, 6]-[10, 11, 12, 13, 14, 15, 16]-[7, 8, 9, 10, 11, 12]#/3#3-[7, 8, 9, 10]-[17, 18, 19, 20]-[13, 14, 15, 16, 17]#/4#4-[11, 12, 13, 14]-[21, 22, 23, 24]-[18, 19, 20]#/5#5-[15]-[25, 26, 27, 28]-[21]#/6#6-[16, 17, 18, 19]-[29, 30, 31, 32, 33]-[22, 23]#/8#8-[23]-[37, 38, 39, 40, 41, 42, 43, 44, 45]-[25, 26, 27]#/7#7-[20, 21, 22]-[34, 35, 36]-[24]#/9#9-[36, 37]-[46, 47, 48]-[28, 29, 30, 31]#10-[24]-[49]-[32, 33]#11-[25]-[50]-[34]#12-[26, 27]-[51, 52, 53]-[35, 36, 37]#13-[28, 29]-[54, 55]-[38]#/10#14-[30, 31, 32]-[56, 57, 58]-[39, 40]#/11#15-[33]-[59, 60, 61, 62, 63]-[41, 42, 43, 44, 45]#/12#16-[34]-[64]-[]#17-[34]-[64]-[]#18-[34]-[64]-[]#/", "[1, 2]", "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]", "[]", "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]" ],
+  "id" : 3,
+  "Name" : "newCV",
+  "Header" : {
+    "id" : 1,
+    "Name" : "Hasan Barzegaravval",
+    "Info" : [ {
+      "id" : 1,
+      "icon" : "data:image/png;base64,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",
+      "Name" : "LinkedIn",
+      "Value" : "LinkedIn",
+      "ImageFilePath" : "",
+      "Link" : "https://www.linkedin.com/in/hasan-barzegaravval"
+    }, {
+      "id" : 2,
+      "icon" : "data:image/png;base64,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",
+      "Name" : "GoogleScholar",
+      "Value" : "GoogleScholar",
+      "ImageFilePath" : "",
+      "Link" : "https://scholar.google.com/citations?user=iLJvWa4AAAAJ&hl=en"
+    }, {
+      "id" : 3,
+      "icon" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTE3OEEzMjk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQTQxNEFCQzk5QTExMUUyOUExNUJDMTA0NkE4OTA0RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1MTc4QTMwOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1MTc4QTMxOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+R7ClIwAADR5JREFUeNrsnQuw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",
+      "Name" : "GitHub",
+      "Value" : "Git",
+      "ImageFilePath" : "",
+      "Link" : "https://github.com/hasan-barzegaravval"
+    }, {
+      "id" : 4,
+      "icon" : "data:image/png;base64,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",
+      "Name" : "Email",
+      "Value" : "hbabusinessinfo@gmail.com",
+      "ImageFilePath" : "",
+      "Link" : "hbabusinessinfo@gmail.com"
+    }, {
+      "id" : 5,
+      "icon" : "data:image/png;base64,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",
+      "Name" : "Phone",
+      "Value" : "",
+      "ImageFilePath" : "",
+      "Link" : ""
+    } ],
+    "Discription" : "Scientific-Engineering Developer-Mechanical Engineer"
+  },
+  "Profile" : {
+    "id" : 1,
+    "Comment" : "I started programming and mechanical engineering studies at the same time. During my career, I have been always developing scientific codes and engineering software for various clients. My AI experience is not limited to ML only and I have extensive experience with optimization, and data collection/acquisition as well. In addition, I worked on pure software engineering projects like web design and CMS, shop sale management system with MYSQL database as well. ",
+    "Age" : null,
+    "Profile" : "I am a mechanical engineer and developer. I started programing and mechanical studies at the same time and during my carrier, I always dealt with projects which where a combination of MATH, Engineering and Programing. I have worked as full time, part time, contractor, and freelancer. Recently I am focusing on AI and data engineering with big data tools as developer and CAE/CAD as mechanical engineer. I will accept new learning opportunities in both mentioned fields (full time, contract). If the project seems fascinating, I will accept freelance and part time positions as well if offered.",
+    "ImageFilePath" : "",
+    "MaterialStatus" : null,
+    "Photo" : null
+  },
+  "Education" : [ {
+    "id" : 1,
+    "Comment" : "The major focus of my study was to develop an optimization framework with proper data post processing and presentation for multidisciplinary decision making.\nThe project included developing numerical simulation algorithm,  programing, optimization data processing, data reduction with non-dimensional paramteres, and regressions. ",
+    "Degree" : "MPhil.Mechanical Engineering",
+    "CGPA" : null,
+    "EndDate" : "2021",
+    "StartDate" : "2017",
+    "Institue" : "Univeristy Technology Malaysia",
+    "Thesis" : "Developing an exergo-economic optimization framework for biogas-fed gas trubines.",
+    "Link" : "https://engineering.utm.my/mechanical/"
+  }, {
+    "id" : 2,
+    "Comment" : "I attended technical courses during thestudy was including Gas Turbines, Steam Trubines, Pumps fans couplings(hydrolic),Boilers Desing, Condensors Desing, Industrial Control, Industrial Control Elements (Lab), Powerplant Operation and Monitoring, Electrical Motors in addition to the main stream mechanical courses.",
+    "Degree" : "BSc.Mechanical Engineering (Power Plant O&M) ",
+    "CGPA" : null,
+    "EndDate" : "2006",
+    "StartDate" : "2001",
+    "Institue" : "Shahid Beheshti Univeristy-Engineering Campus-(formerly known as Univeristy of Water and Power Technology)",
+    "Thesis" : "Investigating the flow revesal in the boiler gas recirculation fan of Hamadan powerplant.",
+    "Link" : "https://enmee.sbu.ac.ir/"
+  } ],
+  "References" : [ ],
+  "Skills" : [ {
+    "id" : 1,
+    "Skill" : "Analytical Thinking",
+    "Rate" : 9
+  }, {
+    "id" : 2,
+    "Skill" : "Communication",
+    "Rate" : 8
+  }, {
+    "id" : 3,
+    "Skill" : "Negotiation",
+    "Rate" : 8
+  }, {
+    "id" : 4,
+    "Skill" : "Resilience",
+    "Rate" : 8
+  }, {
+    "id" : 5,
+    "Skill" : "MATLAB Programing",
+    "Rate" : 8
+  }, {
+    "id" : 6,
+    "Skill" : "Java Programing",
+    "Rate" : 8
+  }, {
+    "id" : 7,
+    "Skill" : "Python Programing",
+    "Rate" : 7
+  }, {
+    "id" : 8,
+    "Skill" : "C++ Programing ",
+    "Rate" : 7
+  }, {
+    "id" : 9,
+    "Skill" : "SOLIDWORKS",
+    "Rate" : 8
+  }, {
+    "id" : 10,
+    "Skill" : "INVENTOR",
+    "Rate" : 7
+  }, {
+    "id" : 11,
+    "Skill" : "FEA/CFD",
+    "Rate" : 7
+  }, {
+    "id" : 12,
+    "Skill" : "System Advisory Model (SAM)",
+    "Rate" : 7
+  } ],
+  "Publications" : [ {
+    "id" : 1,
+    "Type" : "JOUR",
+    "Year" : "2011",
+    "Journal" : "International Journal of Energy Research",
+    "Title1" : "Thermo?economic?environmental multiobjective optimization of a gas turbine power plant with preheater using evolutionary algorithm",
+    "Volume" : "35",
+    "SP" : "389",
+    "EP" : "403",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0363-907X",
+    "PB" : "John Wiley & Sons, Ltd. Chichester, UK",
+    "Authors" : [ "Barzegar Avval, H", "Ahmadi, P", "Ghaffarizadeh, AR", "Saidi, MH" ]
+  }, {
+    "id" : 2,
+    "Type" : "JOUR",
+    "Year" : "2012",
+    "Journal" : "International Journal of Thermophysics",
+    "Title1" : "Analysis of transient heat conduction in a hollow sphere using Duhamel theorem",
+    "Volume" : "33",
+    "SP" : "143",
+    "EP" : "159",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "1572-9567",
+    "PB" : "Springer US",
+    "Authors" : [ "Abdous, Mohammad A", "Barzegar Avval, Hasan", "Ahmadi, Pouria", "Moallemi, Nima", "Dincer, Ibrahim" ]
+  }, {
+    "id" : 3,
+    "Type" : "JOUR",
+    "Year" : "2013",
+    "Journal" : "International Journal of Energy Research",
+    "Title1" : "Thermodynamic modelling of an integrated solid oxide fuel cell and micro gas turbine system for desalination purposes",
+    "Volume" : "37",
+    "SP" : "426",
+    "EP" : "434",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0363-907X",
+    "PB" : null,
+    "Authors" : [ "Hosseini, Mehdi", "Dincer, Ibrahim", "Ahmadi, Pouria", "Avval, Hasan Barzegar", "Ziaasharhagh, Masoud" ]
+  }, {
+    "id" : 4,
+    "Type" : "JOUR",
+    "Year" : "2013",
+    "Journal" : "Energy conversion and management",
+    "Title1" : "Exergoenvironmental optimization of heat recovery steam generators in combined cycle power plant through energy and exergy analysis",
+    "Volume" : "67",
+    "SP" : "27",
+    "EP" : "33",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0196-8904",
+    "PB" : "Pergamon",
+    "Authors" : [ "Kaviri, Abdolsaeid Ganjeh", "Jaafar, Mohammad Nazri Mohd", "Lazim, Tholudin Mat", "Barzegaravval, Hassan" ]
+  }, {
+    "id" : 5,
+    "Type" : "JOUR",
+    "Year" : "2014",
+    "Journal" : "Applied Thermal Engineering",
+    "Title1" : "Modelling and optimization of combined cycle power plant based on exergoeconomic and environmental analyses",
+    "Volume" : "67",
+    "SP" : "566",
+    "EP" : "578",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "1359-4311",
+    "PB" : "Pergamon",
+    "Authors" : [ "Ganjehkaviri, A", "Jaafar, MN Mohd", "Ahmadi, P", "Barzegaravval, H" ]
+  }, {
+    "id" : 6,
+    "Type" : "CHAP",
+    "Year" : "2014",
+    "Journal" : null,
+    "Title1" : "Investigation of Organic Rankine Cycle Performance with Variable Mixture Composition",
+    "Volume" : null,
+    "SP" : "47",
+    "EP" : "64",
+    "Title2" : "Progress in Sustainable Energy Technologies: Generating Renewable Energy",
+    "IS" : null,
+    "SN" : null,
+    "PB" : "Springer, Cham",
+    "Authors" : [ "Barzegaravval, H", "Dincer, Ibrahim" ]
+  }, {
+    "id" : 7,
+    "Type" : "CONF",
+    "Year" : "2007",
+    "Journal" : "Proceedings",
+    "Title1" : "Thermodynamic modeling of combined cycle power plant with gas turbine blade cooling",
+    "Volume" : null,
+    "SP" : null,
+    "EP" : null,
+    "Title2" : null,
+    "IS" : null,
+    "SN" : null,
+    "PB" : null,
+    "Authors" : [ "Avval, HB", "Ahmadi, P" ]
+  }, {
+    "id" : 8,
+    "Type" : "JOUR",
+    "Year" : "2012",
+    "Journal" : "International Journal of Exergy",
+    "Title1" : "Modelling and exergoeconomic optimisation of a gas turbine with absorption chiller using evolutionary algorithm",
+    "Volume" : "11",
+    "SP" : "1",
+    "EP" : "18",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "1742-8297",
+    "PB" : "Inderscience",
+    "Authors" : [ "Ahmadi, P", "Enadi, N", "Avval, H Barzegar", "Dincer, I" ]
+  }, {
+    "id" : 9,
+    "Type" : "JOUR",
+    "Year" : "2015",
+    "Journal" : "international journal of refrigeration",
+    "Title1" : "Investigation of entropy generation in a helically coiled tube in flow boiling condition under a constant heat flux",
+    "Volume" : "60",
+    "SP" : "217",
+    "EP" : "233",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0140-7007",
+    "PB" : "Elsevier",
+    "Authors" : [ "Abdous, Mohammad Ali", "Saffari, Hamid", "Avval, Hasan Barzegar", "Khoshzat, Mohsen" ]
+  }, {
+    "id" : 10,
+    "Type" : "CONF",
+    "Year" : "2011",
+    "Journal" : "2011 IEEE Conference on Clean Energy and Technology (CET)",
+    "Title1" : "Exergy analysis of a cogeneration heat and power (CHP) system (first and second law analysis)",
+    "Volume" : null,
+    "SP" : "29",
+    "EP" : "33",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "1457713543",
+    "PB" : "IEEE",
+    "Authors" : [ "Kaviri, A Ganjeh", "Jafar, MN Mohd", "Tholudin, ML", "Avval, H Barzegar" ]
+  }, {
+    "id" : 11,
+    "Type" : "JOUR",
+    "Year" : "2016",
+    "Journal" : "International Journal of refrigeration",
+    "Title1" : "The study of entropy generation during flow boiling in a micro-fin tube",
+    "Volume" : "68",
+    "SP" : "76",
+    "EP" : "93",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0140-7007",
+    "PB" : "Elsevier",
+    "Authors" : [ "Abdous, Mohammad Ali", "Saffari, Hamid", "Avval, Hasan Barzegar", "Khoshzat, Mohsen" ]
+  }, {
+    "id" : 12,
+    "Type" : "JOUR",
+    "Year" : "2016",
+    "Journal" : "Applied Energy",
+    "Title1" : "On the optimization of energy systems: results utilization in the design process",
+    "Volume" : "178",
+    "SP" : "587",
+    "EP" : "599",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0306-2619",
+    "PB" : "Elsevier",
+    "Authors" : [ "Ganjehkaviri, A", "Jaafar, MN Mohd", "Hosseini, Seyed Ehsan", "Barzegaravval, H" ]
+  }, {
+    "id" : 13,
+    "Type" : "JOUR",
+    "Year" : "2016",
+    "Journal" : "Energy conversion and management",
+    "Title1" : "Thermodynamic assessment of integrated biogas-based micro-power generation system",
+    "Volume" : "128",
+    "SP" : "104",
+    "EP" : "119",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0196-8904",
+    "PB" : "Pergamon",
+    "Authors" : [ "Hosseini, Seyed Ehsan", "Barzegaravval, Hasan", "Wahid, Mazlan Abdul", "Ganjehkaviri, Abdolsaeid", "Sies, Mohsin Mohd" ]
+  }, {
+    "id" : 14,
+    "Type" : "JOUR",
+    "Year" : "2017",
+    "Journal" : "Energy",
+    "Title1" : "Genetic algorithm for optimization of energy systems: Solution uniqueness, accuracy, Pareto convergence and dimension reduction",
+    "Volume" : "119",
+    "SP" : "167",
+    "EP" : "177",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0360-5442",
+    "PB" : "Pergamon",
+    "Authors" : [ "Ganjehkaviri, A", "Jaafar, MN Mohd", "Hosseini, Seyed Ehsan", "Barzegaravval, H" ]
+  }, {
+    "id" : 15,
+    "Type" : "JOUR",
+    "Year" : "2017",
+    "Journal" : "Energy Conversion and Management",
+    "Title1" : "Modelling and exergoeconomic-environmental analysis of combined cycle power generation system using flameless burner for steam generation",
+    "Volume" : "135",
+    "SP" : "362",
+    "EP" : "372",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0196-8904",
+    "PB" : "Pergamon",
+    "Authors" : [ "Hosseini, Seyed Ehsan", "Barzegaravval, Hasan", "Ganjehkaviri, Abdolsaeid", "Wahid, Mazlan Abdul", "Jaafar, MN Mohd" ]
+  }, {
+    "id" : 16,
+    "Type" : "JOUR",
+    "Year" : "2018",
+    "Journal" : "Applied Thermal Engineering",
+    "Title1" : "Effects of fuel composition on the economic performance of biogas-based power generation systems",
+    "Volume" : "128",
+    "SP" : "1543",
+    "EP" : "1554",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "1359-4311",
+    "PB" : "Pergamon",
+    "Authors" : [ "Barzegaravval, Hasan", "Hosseini, Seyed Ehsan", "Wahid, Mazlan Abdul", "Saat, Aminuddin" ]
+  }, {
+    "id" : 17,
+    "Type" : "JOUR",
+    "Year" : "2018",
+    "Journal" : "Energy Conversion and Management",
+    "Title1" : "Hybrid solar flameless combustion system: Modeling and thermodynamic analysis",
+    "Volume" : "166",
+    "SP" : "146",
+    "EP" : "155",
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0196-8904",
+    "PB" : "Pergamon",
+    "Authors" : [ "Hosseini, Seyed Ehsan", "Barzegaravval, Hasan", "Chehroudi, Bruce", "Wahid, Mazlan Abdul" ]
+  }, {
+    "id" : 18,
+    "Type" : "CONF",
+    "Year" : "2019",
+    "Journal" : "AIP Conference Proceedings",
+    "Title1" : "Fuel composition influences on exergetic performance of a standalone internal reforming solid oxide fuel cell",
+    "Volume" : "2062",
+    "SP" : "020054",
+    "EP" : null,
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0735417903",
+    "PB" : "AIP Publishing LLC",
+    "Authors" : [ "Wahid, Mazlan Aabdul", "Barzegaravval, Hasan", "Ghazali, Ahmad Dairobi", "Kasani, Adam", "Mazlan, Mohammad Amri", "Saat, Aminuddin", "Yasin, Mohd" ]
+  }, {
+    "id" : 19,
+    "Type" : "JOUR",
+    "Year" : "2020",
+    "Journal" : "Journal of Cleaner Production",
+    "Title1" : "Dimensionless exergo-economic and emission parameters for biogas fueled gas turbine optimization",
+    "Volume" : "262",
+    "SP" : "121153",
+    "EP" : null,
+    "Title2" : null,
+    "IS" : null,
+    "SN" : "0959-6526",
+    "PB" : "Elsevier",
+    "Authors" : [ "Barzegaravval, Hasan", "Hosseini, Seyed Ehsan", "Wahid, Mazlan Abdul", "Saat, Aminuddin Bin" ]
+  } ],
+  "Languages" : [ {
+    "id" : 1,
+    "Language" : "Farsi",
+    "Comment" : null,
+    "Fluency" : "Native",
+    "Score" : null,
+    "Test" : null
+  }, {
+    "id" : 2,
+    "Language" : "English",
+    "Comment" : "GRE scores are (verbal, quantitative) 317 and (writing 3.0)",
+    "Fluency" : "Fluent",
+    "Score" : "103",
+    "Test" : "TOEFL,GRE"
+  } ],
+  "WorkExperience" : [ {
+    "id" : 1,
+    "Position" : "AI-DataEngineering-DataScience",
+    "Companies" : [ {
+      "id" : 1,
+      "RESPIDS" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "ACHIDS" : [ 1, 2, 3 ],
+      "Projects" : [ {
+        "id" : 1,
+        "Comment" : "A unique robot application required a 2D planar optimal routing.  The robot was used to perform a certain task for multiple objects in a deterministic location (known prior to route planning but changed on daily basis). Hence an optimal path routing to minimize the time of operation and distance traveled was required. Since it was a multi objective optimization of a nonlinear nature, an NSGAIII solver was developed for fully integer problem with improved speed to find the optimal sequence. The robot movement model was obtained through testing using a regression model (black box) to achieve fast optimization. ",
+        "Title" : "Developing a program for optimal robot routing (2D plan) to minimize time and travel distance",
+        "Link" : null
+      }, {
+        "id" : 2,
+        "Comment" : "A software was developed for transient thermal response simulation of a thermal photovoltaic system. The program was developed in three stages:\n1-\tA MATLAB code package\n2-\tA Java software which runs in multi-thread application coupled with Monte Carlo simulation method for large random input sets to perform statistical model analysis. \n3-\tA machine learning regression model is obtained from the previous section for performance evaluation. \n",
+        "Title" : "Software development for Solar TPV simulation and statistical performance modeling using ML. ",
+        "Link" : null
+      }, {
+        "id" : 3,
+        "Comment" : "Statistical methods are applied to control industrial processes (control charts). When the chart shows an out-of-control condition, it is required to assess the possible cause. A classification ML was applied on the process data to automatically detect possible cause of issue using a combination of logic, simulation data and experimentally available data for training the model. Then the model is tested, and the app was developed that accepts the raw data and detect the possible cause (ranked causes by probabilities).",
+        "Title" : "Developing an application for industrial process control using AI for cause detection.",
+        "Link" : null
+      }, {
+        "id" : 4,
+        "Comment" : "A dataset used to train a pretrained ALEXNET. The input data were raw images and data engineering was required prior to training or feeding to the trained model for diagnostic.  A range of Image processing techniques were applied including edge and area detection, shape analysis, and cropping to divide a single image of cells groups into small photos of individual cells. Then all the individual images were fed to the developed model and the outcome was used to diagnose the category of issues along with percentages of each case occurrence.",
+        "Title" : "ALEXNET + Image Processing for Blood cell sickness diagnostic (a code package with UI)",
+        "Link" : null
+      }, {
+        "id" : 5,
+        "Comment" : "A building developer company was applying smart energy management methods for a set of residential buildings. A large network of sensors was installed for a residential complex to monitor variety of daily energy usages. The target was to develop a statistical-physical model (physical-ML model) for building energy consumption prediction, using sensor data. The data was labeled and stored in a SQL database by data acquisition software. The model was adaptive and automatically retrained as more data were gathered.",
+        "Title" : "Developing a mix statistical-physical models for building energy performance estimation using machine learning and sensor data.  ",
+        "Link" : null
+      }, {
+        "id" : 6,
+        "Comment" : "CFD models while accurate and detailed, are resource extensive and timely. A shape optimization study required a unique program to be developed. CFD model was carried out with ANSYS FLUENT, but the output was given to a developed surrogate model (kriging or ML based) to correlate the data with the performance outputs. The model then coupled with a GA global minimizer. The program concept was to simultaneously converge the optimizer-surrogate model to an optimal design point by adding each optimization point as a new solution to surrogate model and retraining the model. Two criteria were chosen as measuring the convergence:\n�\tML model or kriging interpolator error for newly add CFD values. \n�\tConvergence of best solution values of GA optimizer.  \n",
+        "Title" : "Developing a coupled surrogate-optimizer program for CFD-shape optimization. ",
+        "Link" : null
+      } ],
+      "EndDate" : "Present",
+      "StartDate" : "2015",
+      "Achievements" : [ "ML models with above 70% accuracies in long performance test", "Model speed improvements by up to 800% which were suitable for predictive control system", "Semi reinforced learning model for building with ability to improve accuracy over time by 10%" ],
+      "Company" : "Contractor-Freelancer",
+      "Responsibilities" : [ "Developing required mathematical models", "Developing required algorithms or adopt and modify the existing algorithms", "Applying suitable methods to capture optimal paths from 2D photos for robot routing", "Create necessary data processing algorithm and programs for raw data processing and pipelining", "Developing user interfaces with data visualization and reporting capabilities", "Statistical analysis of data, dimension reduction, cleaning, and preparation (structuring) for model extraction", "Applying suitable machine learning methods and extract the models", "Validation and verification (with test design if required)", "Combine all processes into an application with user friendly procedure" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 2,
+    "Position" : "CAE/CAD Engineer",
+    "Companies" : [ {
+      "id" : 2,
+      "RESPIDS" : [ 10, 11, 12, 13, 14, 15, 16 ],
+      "ACHIDS" : [ 4, 5, 6 ],
+      "Projects" : [ {
+        "id" : 7,
+        "Comment" : "A complete analysis of an existing air compressor (reciprocator) was requested in this project. The requirement was: \nTo develop a program that simulate the transient thermofluidic performance of reciprocator. \nTo create a detailed 3D model of the compressor. (Cylinder section with cooling)\nTo conduct structural analysis under operating condition (variable load). (Cylinder section) \nTo perform transient thermal simulation to estimate cooling fins performance. ",
+        "Title" : "3D modeling, structural analysis, and thermal simulation of a reciprocating air compressor in SOLIDWORKS",
+        "Link" : null
+      }, {
+        "id" : 8,
+        "Comment" : "A robot arm with five degrees of freedom was modeled in SOLIDWORKS and motion analysis was conducted to understand the robot movement with given path plan. Kinematic and dynamic analysis were also conducted to realize the forces and torque required by motor and actuators in addition to structural integrity analysis (FEA) for critical parts. Finally, some design improvements were suggested as well. \nThe project included three sections: kinematic and dynamic analysis, 3D modeling and motion analysis. \n",
+        "Title" : "3D Modeling and motion analysis of a robotic arm. (SOLIDWORKS)",
+        "Link" : null
+      }, {
+        "id" : 9,
+        "Comment" : "A gear design application for specific custom gear type was developed that followed the standard gear design methods. The output of design was a detailed 3D model.",
+        "Title" : "Developing a gear design application in (INVENTOR, SOLIDWORK).",
+        "Link" : null
+      }, {
+        "id" : 10,
+        "Comment" : "A manufacturer was creating frame and structure in standard and common form with standard components. Hence, the procedure was highly suitable for automation. An ILOGIC application developed with UI in inventor to automate the design procedure based on the customer need and available elements and parts stock. ",
+        "Title" : "Developing a design automation application using INVENTOR ILOGIC (frame and structure production)",
+        "Link" : null
+      }, {
+        "id" : 11,
+        "Comment" : "For multiple clients, I performed visualization tasks and animation creation in SOLIDWORKS visualize. The example of my works where includes:\nHeadset: Animation with no motion analysis but high-end photo renders.\nA mechanism solution: motion analysis, animation of motion analysis result with visualize.\nA robot arm: animation of a robotic arm in action for advertising. \nA process line including conveyor: for concept visualization and advertisement. \n",
+        "Title" : "Product modeling and visualization. Photo realistic rendering and animation using SOLIDWORKS visualize.  ",
+        "Link" : null
+      }, {
+        "id" : 12,
+        "Comment" : "A powder storage silo was required for a manufacturing facility. A standard design approach was conducted for the design of the storage silo. Since the storage was installed on a structure with rotary machines, a structural and modal analysis was also required. To perform the task, after design the silo, a complete 3D model in AUTODESK INVENTOR was created and structural and modal analysis were performed. Finally design changes and adequate structural supports and vibrational dampers were considered to ensure the operation safety. ",
+        "Title" : "Design of powder storage silo with structural and dynamic modal analysis. ",
+        "Link" : null
+      } ],
+      "EndDate" : "Present",
+      "StartDate" : "2014",
+      "Achievements" : [ "Accurate and verified simulations", "Design optimization to reduce system mass by 15%", "Design automation applications which reduce the design time by 80%" ],
+      "Company" : "Contractor-Freelancer",
+      "Responsibilities" : [ "Developing necessary mathematical models (especially for robot dynamics)", "Creating 3D models in software", "Conducting structural, thermal, motion and modal analysis as required in SOLIDWORKS", "Verification and validation of analysis results", "Developing the iLOGIC app in Inventor", "Developing applications using 3D software APIs in (VBA)", "Photo and animation rendering in SOLIDWORK Visualize" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 3,
+    "Position" : "Scientific - Engineering Developer",
+    "Companies" : [ {
+      "id" : 3,
+      "RESPIDS" : [ 17, 18, 19, 20 ],
+      "ACHIDS" : [ 7, 8, 9, 10 ],
+      "Projects" : [ {
+        "id" : 13,
+        "Comment" : "A fluid charging system was developed by a company for various customer�s needs. The company requested to integrate all their design process into a single application. The project was involved: the app UI development, solver development for different sections, and integrate the already developed solvers in FORTRAN and C++ by design department. ",
+        "Title" : "Developing an application for fluid charging process design",
+        "Link" : null
+      }, {
+        "id" : 14,
+        "Comment" : "A program was developed to analyses the performance of a fluidic system using the sensor data. The program read the sensor data and converted them to understandable performance values for process designers. In addition, a program was developed to analysis the possibility of a certain cause if an abrupt performance drop was happened. To realize if the incident (cause) happened a gray box model (a data driven model that satisfies the thermodynamics and fluid dynamics laws) was required.  The result of the model was to confirm if the certain cause was behind the performance abrupt change. ",
+        "Title" : "Developing program for fluid system analysis and fault detection using sensors data",
+        "Link" : null
+      }, {
+        "id" : 15,
+        "Comment" : "An automated test was designed for a biofluidic material. A biofluid samples where stored in glass test tubes. Then an image was taking by a camera setup. The goal of this project was to develop a program that runs on a device and evaluate the level of stratified biofluid and shows the volumetric ratio of each layer of fluid. \nFirst step was to provide recommendation for proper camera setup and lighting. Afterward a program developed that takes raw images and convert them to color-height maps for three channels and using a unique fast mathematical algorithm developed for this application, height of each section was calculated and converted to the volumetric ratios. The code has been developed in C++ languages with bare minimal dependencies and resource usage to run on a device, hence developing a unique algorithm was required. \n",
+        "Title" : "Developing a program for level measurement of biofluidic material in a tube using image processing",
+        "Link" : null
+      }, {
+        "id" : 16,
+        "Comment" : "Magnetic refrigeration uses magnetocaloric effect to cool down a working fluid. The developed application was capable of a transient one-dimensional magneto refrigerator pack. The output of analysis was transient temperature distribution across time-length of the bed, storage requirement and temperature change of storage, required fluid pumping power and power required for magnetic field maintenance (variation). As requested, the solver was developed in C++ as DLLs and UI in C#. Finite volume method was used for discretization.  \nThat application was a design and analysis package which were capable of:\n�\tAnalyzing multi material (serial) bed configuration. (Configuration and materials as input)\n�\tDefine and use various materials as libraries for magnetic material and working fluid.\n�\tWorking with a custom magnetic cycle function.  ",
+        "Title" : "Developing Transient Magneto-Refrigerator simulation program",
+        "Link" : null
+      }, {
+        "id" : 17,
+        "Comment" : "A mixed multi scale (time-space) model was developed for a borehole system. A borehole is a geothermal energy system which uses a ground (soil) as storage medium. In this work, a program has developed that modeled the whole borehole-ground system from fluid input to the bores till fluid output from the bores. Transient performance over the years of operation, ground temperature distribution and required pumping power was all the output for a given network of bores. Boreholes geometry and locations was given as an input to a numerical solver. As different time and space scales appeared in the problem FD solver was used for the ground and a 4th order Runge-Kutta was used for the borehole fluid model. The interface between two domains-models was developed using interpolating functions. \nAs the main topic was proposing an accurate time dependent predictive function for control purpose, a physically driven mathematical equation form was developed mathematically. Later, the proposed model constant was fitted to a set of randomly generated inputs and outputs from the simulator mentioned above.\nTo match the data with each real cases, a tuning term was added with constants driven from the experimental test data (setup test). \n",
+        "Title" : "Developing transient modeling program for Borehole Thermal energy storage",
+        "Link" : null
+      } ],
+      "EndDate" : "2019",
+      "StartDate" : "2011",
+      "Achievements" : [ "An easy-to-use application with proper documentation.", "Extendable and flexible code structure for future development.", "Acceptable level of accuracy which matches with client requirements.", "The concept of \"Software as knowledge management system\" was achieved." ],
+      "Company" : "Contractor - Freelancer",
+      "Responsibilities" : [ "Develop the mathematical model", "Discretization and numerical algorithm", "Programming the core solver and user interface", "Testing and verification of final application (including test design)" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 4,
+    "Position" : "Energy Engineer",
+    "Companies" : [ {
+      "id" : 4,
+      "RESPIDS" : [ 21, 22, 23, 24 ],
+      "ACHIDS" : [ 11, 12, 13, 14 ],
+      "Projects" : [ {
+        "id" : 18,
+        "Comment" : "To develop a proper business plan and assess accurate cost benefit analysis prior to any further step is required. In the project, a detailed cost analysis for a 5MW solar powerplant was conducted according to the customer available financial scenarios with government intensives for renewable power generation and buyback programs. As renewable energy output is highly variable, it was necessary to evaluate accurate production outputs. Then a post processing program is developed to match outputs and elements costs with local government policies, grid electricity market and customer financial capabilities and options. Finally, a detailed cost of electricity analysis with estimated annual income for different scenarios were prepared and a decision table was provided. ",
+        "Title" : "Feasibility study of a 5MW solar powerplant using System Advisory Model (SAM).",
+        "Link" : null
+      }, {
+        "id" : 19,
+        "Comment" : "An architectural design of an educational facility with about 10000 square meters floor area in AutoCAD files was provided by the client to assess the detailed hourly demand of heat cooling and electricity. The detailed hourly data was required for a smart renewable building design. To achieve the goal, a building 3D model was created in SKETCHUP and ENERGYPLUS SKETCHUP plugin was used to model the energy consumption by given:\n�\tBuilding Schedules. \n�\tBuilding Occupancy estimation (provide by client).\n�\tBuilding spaces applications, and list of appliances (including laboratories, workshops). \n�\tAssumptions on the occasional usage of leisure, theater, and conference area. \nThe target was to determine the hourly energy demand to ensure:\n�\tNational Standards (Highest priority)\n�\tASHREA Standards (Second Highest) \n�\tEquipment safety and O&M requirements if applicable.\nThe verification was required. For verification, calculations were verified by:\n�\tA model building which was under the test.\n�\tComparing results with national standards calculations for the same building (average daily).\n",
+        "Title" : "Building energy demand estimation using Sketchup + Energy Plus. ",
+        "Link" : null
+      }, {
+        "id" : 20,
+        "Comment" : "An off grid seasonal mansion was relying on conventional diesel generators. As the mansion was luxurious the client was looking for a safe (there were dangers regarding large flammable fuel storage), quiet (considering the noise of generator) yet reliable solar system for the building. The target of the project was to design a PV system which supplies electricity demand of building in two main operation mode:\n1-\tHigh demand period: Three month of summer with high sun availability.\n2-\tLow demand period: The rest of the year to keep the basic maintenance of building running.\nIn addition, there where critical level of demand for security system that must be always met.\nThe optimal sizing of the PV system with battery banks was conducted using SAM software for the local sun condition. A risk assessment was conducted also for critical demand to ensure the safety and security system operation. \nComprehensive statistical methods were used to ensure the reliability since the building was off grid. \n",
+        "Title" : "Residential PV design and analysis using System Advisory Model (SAM).",
+        "Link" : null
+      } ],
+      "EndDate" : "2019",
+      "StartDate" : "2016",
+      "Achievements" : [ "Verified and accurate performance modeling and energy demand estimation", "Providing optimization suggestion which reduces 5% energy demand reduction in building.", "Solar plant optimal design for maximum profit.", "A 95% reliability for off grid solar powered building in spring summer with 99% mixed energy system reliability overall." ],
+      "Company" : "Consultant",
+      "Responsibilities" : [ "Performance analysis using EnergyPlus and SketchUP", "Performance analysis using SAM", "Economic assessment", "Feasibility analysis" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 5,
+    "Position" : "Project Manager",
+    "Companies" : [ {
+      "id" : 5,
+      "RESPIDS" : [ 25, 26, 27, 28 ],
+      "ACHIDS" : [ 15 ],
+      "Projects" : [ {
+        "id" : 21,
+        "Comment" : "5 million tons Iron Ore plant in SANGAN. In detail cost estimation of an EPC project. The project was including the market data gathering, cost estimation models, price lists and labor-service schedules.",
+        "Title" : "Cost estimation for SANGAN Iron Ore plant",
+        "Link" : ""
+      } ],
+      "EndDate" : "2017",
+      "StartDate" : "2016",
+      "Achievements" : [ "Client satisfaction for quality service." ],
+      "Company" : "Sharif Rotary Industries",
+      "Responsibilities" : [ "Hiring personnel.", "Developing project task breakdown and timeline.", "Monitoring the project progress (project control).", "handling the meetings with clients." ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 6,
+    "Position" : "Mechanical Design Lead",
+    "Companies" : [ {
+      "id" : 6,
+      "RESPIDS" : [ 29, 30, 31, 32, 33 ],
+      "ACHIDS" : [ 16, 17, 18, 19 ],
+      "Projects" : [ {
+        "id" : 22,
+        "Comment" : "A mixture of heat transfer modeling, solid structural analysis, and cost evalaution project. The project included extensive use of CAE/CAD. ",
+        "Title" : "Feasibility of Material Change for buildings Radiators. Thermo-mechanical performance and cost study.",
+        "Link" : ""
+      }, {
+        "id" : 23,
+        "Comment" : "Design includes complete pneumatic feeding line. Horizontal, vertical, and inclined air slides and air shoots for a corrosive material transfer was the main design challenge in this project. The CAE/CAD was used for all design and documentation in CATIA and INVENTOR software plus I developed a program for process design with testing and validation procedures. ",
+        "Title" : "Design of automated pneumatic powder feeding system for aluminum smelting plant. (Hormozgan plant).",
+        "Link" : ""
+      } ],
+      "EndDate" : "2016",
+      "StartDate" : "2013",
+      "Achievements" : [ "Successful process design for automated powder handling system.", "Developing a process design software for the powder handling system.", "Successful implementation of design standards.", "Impressive adaptation of various CAE and CAD methods and software in design and analysis." ],
+      "Company" : "Sharif Rotary Industries",
+      "Responsibilities" : [ "Developing the process design software.", "Monitoring accurate implementation of design standards.", "Developing and assessing the PFD (process flow diagram) and P&ID for the project", "Review and verify the drawings and models.", "Communicating the design requirements and progress with client." ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 8,
+    "Position" : "Senior Mechanical Design Engineer",
+    "Companies" : [ {
+      "id" : 8,
+      "RESPIDS" : [ 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+      "ACHIDS" : [ 23 ],
+      "Projects" : [ {
+        "id" : 25,
+        "Comment" : "Experimental test rig design for testing combustion performance of the engine.",
+        "Title" : "Design of combustion test rig for a newly developed engine",
+        "Link" : ""
+      }, {
+        "id" : 26,
+        "Comment" : "A software for design and analysis of AC condenser for vehicle is developed. Refrigerants was R series, and a one-dimensional model is applied for modeling the flow and heat transfer of a compact heat exchanger.",
+        "Title" : "Developing design software for vehicle AC condenser.",
+        "Link" : ""
+      }, {
+        "id" : 27,
+        "Comment" : "Applying CAE methods to develop a virtual test environment for design of a new integrated compact cooling pack for vehicle. In addition a design program is developed for design and testing. ",
+        "Title" : "Design of a new compact cooling package (Fan, Condenser, Radiator) for vehicle",
+        "Link" : ""
+      } ],
+      "EndDate" : "2013",
+      "StartDate" : "2011",
+      "Achievements" : [ "The software is developed and delivered successfully, and it was validated with experimental tests results." ],
+      "Company" : "Sharif Rotary Industries",
+      "Responsibilities" : [ "Developing the test theoretical framework. (As a team member)", "Dimensional analysis and parameters definition", "Defining minimal test requirements. (As a team member)", "Implementing Design of experiment methods for test procedure.", "Test rig detail design. (As a team member)", "Developing the mathematical models.", "Developing the numerical algorithms.", "Developing the material property library.", "Programing the core solver and developing the GUI." ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 7,
+    "Position" : "Project Engineer",
+    "Companies" : [ {
+      "id" : 7,
+      "RESPIDS" : [ 34, 35, 36 ],
+      "ACHIDS" : [ 20, 21, 22 ],
+      "Projects" : [ {
+        "id" : 24,
+        "Comment" : " System performance simulation, gain analysis and risk assessment were carried out in the project. This project was including using simulation software and developing analysis programs.",
+        "Title" : "Technical feasibility study of power augmentation of engine using inlet water injection.",
+        "Link" : ""
+      } ],
+      "EndDate" : "2011",
+      "StartDate" : "2010",
+      "Achievements" : [ "Reverse design of the engine control concepts which matches the performance data.", "Successful simulation and analysis of the system to acceptable level of accuracy(verified).", "Successful achievement of the project goals." ],
+      "Company" : "Asia Sanat Pishro",
+      "Responsibilities" : [ "Developing the engine model.", "Technical risk analysis of the water injection.", "Concept developing and analysis of the injection system." ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 9,
+    "Position" : "Tutor-Instructor",
+    "Companies" : [ {
+      "id" : 9,
+      "RESPIDS" : [ 46, 47, 48 ],
+      "ACHIDS" : [ 36, 37 ],
+      "Projects" : [ {
+        "id" : 28,
+        "Comment" : null,
+        "Title" : "SOLIDWORKS",
+        "Link" : null
+      }, {
+        "id" : 29,
+        "Comment" : null,
+        "Title" : "Python Programming",
+        "Link" : null
+      }, {
+        "id" : 30,
+        "Comment" : null,
+        "Title" : "JAVA Programming",
+        "Link" : null
+      }, {
+        "id" : 31,
+        "Comment" : null,
+        "Title" : "INVENTOR + iLogic",
+        "Link" : null
+      } ],
+      "EndDate" : "Present",
+      "StartDate" : "2019",
+      "Achievements" : [ "Training students with practical knowledge", "Ignite the student�s curiosity" ],
+      "Company" : "RPI College",
+      "Responsibilities" : [ "Training material preparation", "Teaching", "Testing and evaluation" ],
+      "Link" : null
+    }, {
+      "id" : 10,
+      "RESPIDS" : [ 49 ],
+      "ACHIDS" : [ 24 ],
+      "Projects" : [ {
+        "id" : 32,
+        "Comment" : null,
+        "Title" : "MATLAB programing fundamental",
+        "Link" : null
+      }, {
+        "id" : 33,
+        "Comment" : null,
+        "Title" : "System simulation with MATLAB programing",
+        "Link" : null
+      } ],
+      "EndDate" : "2015",
+      "StartDate" : "2014",
+      "Achievements" : [ "Training students with high level of programing skill" ],
+      "Company" : "Shahid Beheshti University",
+      "Responsibilities" : [ "Preparing the training material" ],
+      "Link" : null
+    }, {
+      "id" : 11,
+      "RESPIDS" : [ 50 ],
+      "ACHIDS" : [ 25 ],
+      "Projects" : [ {
+        "id" : 34,
+        "Comment" : null,
+        "Title" : "Economics of Energy Systems (WORKSHOP)",
+        "Link" : null
+      } ],
+      "EndDate" : "2014",
+      "StartDate" : "2013",
+      "Achievements" : [ "Boosting the awareness of new energy engineers and students about economics of an energy system project" ],
+      "Company" : "AMID Energy Co",
+      "Responsibilities" : [ "Training Materials preparation" ],
+      "Link" : null
+    }, {
+      "id" : 12,
+      "RESPIDS" : [ 51, 52, 53 ],
+      "ACHIDS" : [ 26, 27 ],
+      "Projects" : [ {
+        "id" : 35,
+        "Comment" : "",
+        "Title" : "MATH I for computer engineering students ",
+        "Link" : null
+      }, {
+        "id" : 36,
+        "Comment" : null,
+        "Title" : "MATH II for computer engineering students",
+        "Link" : null
+      }, {
+        "id" : 37,
+        "Comment" : null,
+        "Title" : "Advance Engineering Mathematics ",
+        "Link" : null
+      } ],
+      "EndDate" : "2009",
+      "StartDate" : "2008",
+      "Achievements" : [ "Enhancing the students comperhension of fundamantal concepts", "Improving the students abilities to solve challenging problems" ],
+      "Company" : "Payam Noor Univeristy of Birjand",
+      "Responsibilities" : [ "Identify the weak points of students", "Prepare the topics and examples", "Provide insight to solutions for challenging problems" ],
+      "Link" : null
+    }, {
+      "id" : 13,
+      "RESPIDS" : [ 54, 55 ],
+      "ACHIDS" : [ 28, 29 ],
+      "Projects" : [ {
+        "id" : 38,
+        "Comment" : null,
+        "Title" : "Teacher assisstant for Fluid Dynamics",
+        "Link" : null
+      } ],
+      "EndDate" : "2007",
+      "StartDate" : "2006",
+      "Achievements" : [ "Improving the students abilities in solving problems", "Boosting the students understanding of concepts" ],
+      "Company" : "Shahid Beheshti University",
+      "Responsibilities" : [ "Preparing examples and their solutions", "Providing extra discussion for difficult topics as necessary" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 10,
+    "Position" : "Web Developer",
+    "Companies" : [ {
+      "id" : 14,
+      "RESPIDS" : [ 56, 57, 58 ],
+      "ACHIDS" : [ 30, 31, 32 ],
+      "Projects" : [ {
+        "id" : 39,
+        "Comment" : "A website was developed from template with pure HTML CSS and JS coding. In addition, all the necessary steps were taking to make the website fully functional and online and a year of testing and CMS were also provided.  Website SEO, speed and responsiveness testing also performed to improve the site ranking and user experience.",
+        "Title" : "Website services for a travel agency (pure html css, js with template)",
+        "Link" : null
+      }, {
+        "id" : 40,
+        "Comment" : "Comprehensive website management services including all necessary modifications (PHP MySQL), content management and SEO improvements where provided. In addition, google analytic and search console setup were also conducted to provide insight into the website performance.",
+        "Title" : "Website CMS and SEO for an educational institue (php,mysql)",
+        "Link" : null
+      } ],
+      "EndDate" : "2021",
+      "StartDate" : "2018",
+      "Achievements" : [ "Fast and responsive website", "Ranking improvement", "Reduce errors and increase uptime" ],
+      "Company" : "Contractor-Freelancer",
+      "Responsibilities" : [ "Complete website life cycle (development, go live (cPanel), migration and content management)", "SEO, google analytics and google search console", "WebSite content management, diagnostic and host migration" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 11,
+    "Position" : "Embedded system developer",
+    "Companies" : [ {
+      "id" : 15,
+      "RESPIDS" : [ 59, 60, 61, 62, 63 ],
+      "ACHIDS" : [ 33 ],
+      "Projects" : [ {
+        "id" : 41,
+        "Comment" : "The project required a pure C-C++ implementation of the program, and no Arduino API was allowed. The datasheet of the board was provided and completely examined to understand the board logic and structure required for programing. In addition, some hardware components were equipped with chips with different clock time and a careful timing for communication were required. A combination of digital and analogue pins, interrupts and serial ports were used in the project.",
+        "Title" : "programing Arduino board with multiple sensor actuators in pure C-C++ (without Arduino libraries)",
+        "Link" : null
+      }, {
+        "id" : 42,
+        "Comment" : "A robotic project was consisting of multiple motors, sensors and actuators which required multiple boards to be used at the same time. Hence a master board were taking care of the main operation logic while other boards control certain sensors and motors for fast and secure operations.",
+        "Title" : "Developing the master controller board logic (program) for a multi Arduino board control system",
+        "Link" : null
+      }, {
+        "id" : 43,
+        "Comment" : "A robotic arm path planning and control logic were simulated by a prototype using an Arduino board.",
+        "Title" : "Robotic arm control with Arduino (hardware-programing) ",
+        "Link" : null
+      }, {
+        "id" : 44,
+        "Comment" : "A program module was required for a specific motor type and specific control strategy. A module developed as motor class for Arduino, but it was possible to program in pure functional and procedural paradigm if required.  ",
+        "Title" : "Motor controller program (module) for arduino board in C++",
+        "Link" : null
+      }, {
+        "id" : 45,
+        "Comment" : "An industrial mechanism was designed for a production line and to proof the functionality a prototype was requested by the client. Hence a prototype including the mechanism, sensors, actuators, and control logic were implemented.",
+        "Title" : "Prototyping an industrial mechanism with motor-actuator and a microcontroller",
+        "Link" : null
+      } ],
+      "EndDate" : "2021",
+      "StartDate" : "2018",
+      "Achievements" : [ "Design goals were sucessfully achieved" ],
+      "Company" : "Contractor-Freelancer",
+      "Responsibilities" : [ "Creating required hardware setups", "Developing the program (C-C++)", "Implementing instruction from the hardware datasheet for processors, sensors and actuators", "Testing", "Training if required" ],
+      "Link" : null
+    } ]
+  }, {
+    "id" : 12,
+    "Position" : "Journal Reviewer",
+    "Companies" : [ {
+      "id" : 16,
+      "RESPIDS" : [ 64 ],
+      "ACHIDS" : [ 34 ],
+      "Projects" : [ ],
+      "EndDate" : "2017",
+      "StartDate" : "2011",
+      "Achievements" : [ "Review" ],
+      "Company" : "Energy  (The International Journal)",
+      "Responsibilities" : [ "Review" ],
+      "Link" : "https://www.journals.elsevier.com/energy"
+    }, {
+      "id" : 17,
+      "RESPIDS" : [ 64 ],
+      "ACHIDS" : [ 34 ],
+      "Projects" : [ ],
+      "EndDate" : "2021",
+      "StartDate" : "2014",
+      "Achievements" : [ "Review" ],
+      "Company" : "Energy Conversion and Managment",
+      "Responsibilities" : [ "Review" ],
+      "Link" : "https://www.journals.elsevier.com/energy-conversion-and-management"
+    }, {
+      "id" : 18,
+      "RESPIDS" : [ 64 ],
+      "ACHIDS" : [ 34 ],
+      "Projects" : [ ],
+      "EndDate" : "2013",
+      "StartDate" : "2011",
+      "Achievements" : [ "Review" ],
+      "Company" : "International Journal of Hydrogen Energy",
+      "Responsibilities" : [ "Review" ],
+      "Link" : "https://www.journals.elsevier.com/international-journal-of-hydrogen-energy"
+    } ]
+  } ]
+}
+</script>
+        
+    </head>
+    <body>      
+        
+    </body>  
+    <!--Main Script-->
+<script>        /*
+         * Copyright (C) 2022 hasan
+         *
+         * This program is free software: you can redistribute it and/or modify
+         * it under the terms of the GNU General Public License as published by
+         * the Free Software Foundation, either version 3 of the License, or
+         * (at your option) any later version.
+         *
+         * This program is distributed in the hope that it will be useful,
+         * but WITHOUT ANY WARRANTY; without even the implied warranty of
+         * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+         * GNU General Public License for more details.
+         *
+         * You should have received a copy of the GNU General Public License
+         * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+         */
+
+        /**
+         * Main JavaScript funnction. this method create and return elements of your Html.
+         * Data is the json Data loaded to your HTML.
+         * Classes used here to create elements are from Lib.js loaded.
+         * 
+         * @returns does not return any value. void function.
+         * @author  Hasan Barzegaravval
+         * @see     Lib.js
+         * @version 1.0
+         * @since   1.0
+         * 
+         */
+        'use strict';
+        function main(){
+           let education=Data.Education.map(function(e){return (new Education(e)).Create();});
+           let WorkExperience=Data.WorkExperience.map(function(e){return Work(e);});
+           let Languages=Data.Languages.map(function(e){return (new Language(e)).Create();});
+           let Skills=new Skill(Data.Skills);
+           let References=Data.References.map(function(e){return (new Reference(e)).Create();});
+           let HEAD=new Header(Data.Header);
+           HEAD.ToSHow();
+           let El0=new Element({tag:"h2",Class:"SectionHeader",Text:"Personal Profile"},(new Profile(Data.Profile)).Create(),["Element","main"]).ToSHow();
+           let El2=new Element({tag:"h2",Class:"SectionHeader",Text:"Work Experience"},WorkExperience,["Element","main"]).ToSHow();
+           let El=new Element({tag:"h2",Class:"SectionHeader",Text:"Education"},education,["Element","main"]).ToSHow();
+           let El3=new Element({tag:"h2",Class:"SectionHeader",Text:"Skills"},Skills.Create(),["Element","main"]).ToSHow();
+           let El4=new Element({tag:"h2",Class:"SectionHeader",Text:"Languages"},Languages,["Element","main"]).ToSHow();
+           let CitePattern={"JOUR":["Authors","Title1","Journal","Year"],"BOOK":["Authors","Title1","Year","PB"],"CHAP":["Authors","Title1","Title2","Year","PB"],"CONF":["Authors","Title1","Journal","Year","PB"]};
+           CitePattern["isme"]=function(Lookin){
+               let myname=["Barz","Avval"];
+               return (myname.map(function(e){return Lookin.includes(e);})).reduce((p,c)=>p|c,false)? "isme":"co";
+           };   
+           let Pub=new Publications(Data.Publications,CitePattern);
+           Pub.El.ToSHow();
+           let El5=new Element({tag:"h2",Class:"SectionHeader",Text:"References"},References,["Element",(DATA.References==null?"Broken":"main")]).ToSHow();
+        }
+        main();
+        document.title=Data.Header.Name;
+</script>  
+      
+          
+</html>

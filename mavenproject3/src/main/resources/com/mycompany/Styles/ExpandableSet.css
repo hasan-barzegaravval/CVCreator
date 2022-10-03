@@ -1,0 +1,46 @@
+/*
+Copyright (C) 2022 hasan
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : Aug 2, 2022, 2:46:54 PM
+    Author     : hasan Barzegaravval
+    for icons please visit the source website at:
+    https://web.archive.org/web/20210304033231/https://iconarchive.com/
+*/
+Button{
+    -fx-background-color: transparent;
+    -fx-background-radius:100;
+    -fx-cursor:hand;
+}
+Button:hover{
+    -fx-background-color: darkgray;
+}
+Button:pressed{
+    -fx-background-color: burlywood;
+}
+
+.Up{
+    -fx-graphic:url(../icons/up-32.png);     
+}
+.Down{
+    -fx-graphic:url(../icons/down-32.png);
+}
+.Delete{
+    -fx-graphic:url(../icons/delete-32.png);
+}
+.Add{
+    -fx-graphic:url(../icons/add-32.png);
+}

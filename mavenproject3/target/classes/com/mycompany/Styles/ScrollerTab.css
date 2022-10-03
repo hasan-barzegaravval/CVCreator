@@ -1,0 +1,45 @@
+/*
+Copyright (C) 2022 hasan
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : Aug 2, 2022, 2:46:37 PM
+    Author     : hasan
+*/
+ScrollPane{
+    
+    
+    -fx-alignment:center;
+   
+}
+ScrollerPane>.content{
+    -fx-alignment:center;
+}
+TabPane{
+    -fx-pref-width:820;
+    -fx-pref-height:560;
+}
+.Comment{
+    -fx-pref-height:150;
+}
+.Immutable{
+    -fx-column-halignment:center;
+    -fx-border-style:solid;
+}
+.ContentPan{
+    -fx-border-style:solid;
+    
+    -fx-pref-width:780;
+}

@@ -1,0 +1,4 @@
+--patch-module
+com.mycompany.mavenproject3=_
+--add-reads
+com.mycompany.mavenproject3=ALL-UNNAMED
